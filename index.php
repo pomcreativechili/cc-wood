@@ -9,7 +9,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo str_replace('_', '', $sess_lg); ?>">
 <head>
 <link rel="shortcut icon" href="<?php echo $url;?>/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,6 +17,11 @@
 <meta name="description" content="<?php echo $pdesc;?>" />
 <meta name="keywords" content="<?php echo $pkeys;?>" />
 
+<?php if ($sess_lg == '_th') { ?>
+<link href="https://fonts.googleapis.com/css?family=Prompt:400,400i,700,700i" rel="stylesheet">
+<?php } else { ?>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,600i" rel="stylesheet">
+<?php } ?>
 <link href="<?php echo $url;?>/css/default.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $url;?>/css/content/info.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $url;?>/css/content/list.accordian.css" rel="stylesheet" type="text/css" />

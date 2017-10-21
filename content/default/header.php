@@ -1,22 +1,27 @@
 <div id="header"<?php echo $headercss;?>>
 	<div id="logo">
         <div id="logoarea">
-            <h1><a href="<?php echo $url."/".$lgurl;?>">Thaweephan</a></h1>
-            <h2>Premium Quality Wook. Service Excellence. Since 1955</h2>
-            <h2>Refining Nature. Defining Quality.</h2>
+            <h1>
+                <a href="<?php echo $url."/".$lgurl;?>">
+                    <img src="<?php echo $url;?>/images/default/thaweephan-logo.png" />
+                    <span>Thaweephan</span>
+                </a>
+            </h1>
+            <h2>
+                <div class="motto">the architectural woodworking company</div>
+                <div class="tagline">
+                    <span>product</span>
+                    <span>design</span>
+                    <span>carpentry</span>
+                </div>
+            </h2>
             <ul id="language">
                 <li><a href="<?php echo $url.'/en';?>" class="mnen<?php if ($sess_lg == "_en") echo " mnlgselect";?>">Eng</a></li>
-                <li><a href="<?php echo $url.'/th';?>" class="mnth<?php if ($sess_lg == "_th") echo " mnlgselect";?>">ไทย</a></li>
+                <li><a href="<?php echo $url.'/th';?>" class="mnth<?php if ($sess_lg == "_th") echo " mnlgselect";?>">Tha</a></li>
             </ul>
         </div>
 	</div>
-    <ul id="social">
-        <li><a href="https://www.facebook.com/thaweephanwood" target="_blank" class="mnfacebook">Facebook</a></li>
-        <li><a href="http://www.linkedin.com/company/thaweephan-wood-products" target="_blank" class="mnlinkedin">LinkedIn</a></li>
-        <li><a href="mailto:admin@thaweephan.co.th" target="_blank" class="mnemail">Email to Thaweephan</a></li>
-        <li><a href="<?php echo $url."/pdf/Thaweephan_Brochure".$sess_lg.".pdf";?>" target="_blank" class="mndownload">Download E-Brochure</a></li>
-        <li><a href="<?php echo $url.$lgurl.'/popup/'.$mntxt['0001']['url'];?>" class="mncontact popupcontact">Contact Us</a></li>
-    </ul>
+    <div id="banner"<?php echo $headercss;?>><?php include("banner.php");?></div>
     <div id="menuarea">
         <ul id="topmenu">
             <li><a href="<?php echo $url.$lgurl;?>"<?php if ($pid == "0000") echo ' class="mnselect"';?>>Home</a></li>
@@ -64,7 +69,13 @@
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['7000']['url'];?>"<?php if ($pid == "7000") echo ' class="mnselect"';?>>International</a></li>
         </ul>
 	</div>
-    <div id="banner"<?php echo $headercss;?>><?php include("banner.php");?></div>
+    <ul id="social">
+        <li><a href="https://www.facebook.com/thaweephanwood" target="_blank" class="mnfacebook">Facebook</a></li>
+        <li><a href="http://www.linkedin.com/company/thaweephan-wood-products" target="_blank" class="mnlinkedin">LinkedIn</a></li>
+        <li><a href="mailto:admin@thaweephan.co.th" target="_blank" class="mnemail">Email to Thaweephan</a></li>
+        <li><a href="<?php echo $url."/pdf/Thaweephan_Brochure".$sess_lg.".pdf";?>" target="_blank" class="mndownload">Download E-Brochure</a></li>
+        <li><a href="<?php echo $url.$lgurl.'/popup/'.$mntxt['0001']['url'];?>" class="mncontact popupcontact">Contact Us</a></li>
+    </ul>
 </div>
 
 <div id="content">
