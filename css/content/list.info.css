@@ -1,0 +1,108 @@
+/* LIST - INFO
+__________________________________________________ */
+
+#infoarea #listinfo	{
+	width:860px;
+}
+#listinfo .listbox	{
+	padding:35px 10px 35px 10px;
+	width:840px;
+}
+#listinfo .listeven	{
+	background:#ececec !important;
+}
+
+/* Thumbnail */
+#listinfo .listbox .listboxthumb	{
+	float:left;
+	padding-right:35px;
+	width:265px;
+}
+#listinfo .listbox .listboxthumb img	{
+	width:265px;
+	height:200px;
+	background:url(../../images/loading/large.gif) no-repeat #b49c89 center;
+}
+#listinfo .listbox .listboxthumb a:hover	{
+	opacity:0.9;
+}
+
+/* Detail */
+#listinfo .listbox .listboxdetail	{
+	float:left;
+	width:540px;
+	line-height:22px;
+	text-align:justify;
+}
+#listinfo .listbox .listboxdetail h3	{
+	padding-bottom:25px;
+	font-size:13px;
+	color:#292929;
+}
+#listinfo .listbox .listboxdetail p	{
+	font-size:12px;
+}
+#listinfo .listbox .listboxdetail .listbutton	{
+	padding-top:25px;
+	font-size:12px;
+	line-height:12px;
+}
+#listinfo .listbox .listboxdetail .listbutton:hover	{
+	opacity:0.9;
+}
+#listinfo .listbox .listboxdetail .listbutton a	{
+	display:inline-block;
+	padding-left:30px;
+	color:#fff;
+	text-decoration:none;
+	height:28px;
+	background:url(../../images/content/btlist.jpg) no-repeat;
+}
+#listinfo .listbox .listboxdetail .listbutton a span	{
+	padding:8px 14px 0px 14px;
+	height:20px;
+	display:inline-block;
+	background:#604f45;
+}
+
+/* News Button */
+#listinfo .listbox .listboxdetail .newsbutton a	{
+	padding-left:0px !important;
+	background:none !important;
+}
+
+/* Pagination */
+#listinfo #pagination	{
+	margin:auto;
+	padding-top:40px;
+	width:140px;
+	height:21px;
+}
+#pagination a	{
+	position:absolute;
+	display:block;
+	width:21px;
+	height:21px;
+	text-indent:-5000px;
+}
+#pagination a:hover	{
+	opacity:0.9;
+}
+#pagination .pnprev	{
+	background:url(../../images/content/pgprev.jpg) no-repeat
+}
+#pagination .pnnext	{
+	margin-left:119px;
+	background:url(../../images/content/pgnext.jpg) no-repeat
+}
+#pagination span	{
+	position:absolute;
+	margin-left:21px;
+	padding-top:3px;
+	display:block;
+	width:98px;
+	font-size:14px;
+	text-align:center;
+	line-height:14px;
+	color:#6b5543;
+}

@@ -1,0 +1,209 @@
+/* HIGHLIGHT
+__________________________________________________ */
+
+#highlight	{
+	margin:auto;
+	padding:45px 60px 0px 60px;
+	width:840px;
+	position:relative;
+}
+#highlight .hlnext,
+#highlight .hlprev	{
+	position:absolute;
+	width:60px;
+	height:125px;
+	text-indent:-5000px;
+	display:block;
+	cursor:pointer;
+}
+#highlight .hlprev	{
+	left:0px;
+	background:url(../images/content/hmprev.png) no-repeat;
+}
+#highlight .hlnext	{
+	right:0px;
+	background:url(../images/content/hmnext.png) no-repeat;
+}
+#highlight #highlightarea	{
+	position:relative;
+	padding-bottom:46px;
+	width:840px;
+	height:124px;
+	border-bottom:1px solid #bdb3a9;
+	overflow:hidden;
+}
+#highlightarea #highlightboxarea	{
+	position:absolute;
+	height:124px;
+}
+#highlightboxarea .highlightbox	{
+	float:left;
+	margin-left:34px;
+	width:124px;
+	height:124px;
+	overflow:hidden;
+}
+#highlightboxarea .highlightbox .hlclear	{
+	display:block;
+	width:124px;
+	height:124px;
+	background:#ccc;
+}
+#highlightboxarea .highlightbox .hlc1	{
+	background:url(../images/content/boxhl1.jpg) no-repeat;
+}
+#highlightboxarea .highlightbox .hlc2	{
+	background:url(../images/content/boxhl2.jpg) no-repeat;
+}
+#highlightboxarea .highlightbox .hlc3	{
+	background:url(../images/content/boxhl3.jpg) no-repeat;
+}
+
+/* Picture */
+#highlightboxarea .highlightbox .highlightboxpic	{
+	float:left;
+	width:124px;
+	height:124px;
+	background:url(../images/loading/medium.gif) no-repeat #b49c89 center;
+}
+#highlightboxarea .highlightbox .highlightboxpic span,
+#highlightboxarea .highlightbox .highlightboxpic img	{
+	position:absolute;
+	width:124px;
+	height:124px;
+	z-index:1;
+}
+#highlightboxarea .highlightbox .highlightboxpic .hlcover	{
+	background:url(../images/content/cvhighlight.png) no-repeat;
+	display:block;
+	z-index:2;
+	cursor:pointer;
+}
+#highlightboxarea .highlightbox .highlightboxpic .hlcover:hover	{
+	background:none !important;
+}
+
+/* Selected */
+#highlightboxarea .highlightbox:first-child	{
+	width:366px;
+}
+#highlightboxarea .highlightbox .highlightboxinfo	{
+	float:left;
+	padding-top:3px;
+	padding-left:20px;
+	width:207px;
+	display:none;
+}
+#highlightboxarea .highlightbox:first-child .highlightboxinfo	{
+	display:block !important;
+}
+#highlightboxarea .highlightbox .highlightboxinfo h3	{
+	padding-bottom:15px;
+	font-size:14px;
+	text-transform:uppercase;
+	line-height:22px;
+}
+#highlightboxarea .highlightbox .highlightboxinfo p	{
+	font-size:12px;
+	line-height:20px;
+}
+
+/* Bullet */
+#highlightarea #highlightbullet	{
+	position:absolute;
+	margin-top:144px;
+}
+#highlightbullet span	{
+	display:block;
+	float:left;
+	margin-left:7px;
+	width:6px;
+	height:6px;
+	background:#ddd;
+	cursor:pointer;
+}
+#highlightbullet .hlbselect	{
+	background:#7c6b59 !important;
+}
+
+
+/* VIDEO
+__________________________________________________ */
+
+#video	{
+	margin:auto;
+	padding:0px 60px 100px 60px;
+	width:840px;
+	position:relative;
+}
+#video .next, #video .vdnext,
+#video .prev, #video .vdprev	{
+	position:absolute;
+	margin-top:60px;
+	width:60px;
+	height:125px;
+	text-indent:-5000px;
+	display:block;
+}
+#video .prev	{
+	left:0px;
+}
+#video .vdprev	{
+	left:0px;
+	background:url(../images/content/hmprev.png) no-repeat;
+}
+#video .next	{
+	right:0px;
+}
+#video .vdnext	{
+	right:0px;
+	background:url(../images/content/hmnext.png) no-repeat;
+}
+#video .slides_container	{
+	position:relative;
+	width:840px;
+	border-top:1px solid #bdb3a9;
+}
+#video .slides_container .videobox	{
+	padding-top:60px;
+	width:840px;
+	min-height:124px;
+}
+#video .slides_container .videobox .videoboxinfo	{
+	float:left;
+	padding-right:35px;
+	width:515px;
+}
+#video .slides_container .videobox .videoboxinfo h3	{
+	padding-bottom:25px;
+	font-size:16px;
+	line-height:24px;
+}
+#video .slides_container .videobox .videoboxinfo p	{
+	line-height:22px;
+}
+#video .slides_container .videobox .videoboxpic	{
+	float:left;
+	padding-left:166px;
+	width:124px;
+	height:124px;
+	background:url(../images/content/bgvideo.jpg) no-repeat;
+}
+#video .slides_container .videobox .videoboxpic a:hover	{
+	opacity:0.9;
+}
+#video .slides_container .videobox .videoboxpic a span	{
+	position:absolute;
+	display:block;
+	width:124px;
+	height:124px;
+	background:url(../images/content/cvvideo.png) no-repeat;
+	z-index:2	
+}
+#video .slides_container .videobox .videoboxpic a img	{
+	position:absolute;
+	width:124px;
+	height:124px;
+	background:url(../images/loading/medium.gif) no-repeat #b49c89 center;
+	z-index:1;
+}

@@ -1,0 +1,45 @@
+/* LIST - SUB PAGES
+__________________________________________________ */
+
+#info #listsub	{
+	padding:20px 10px 20px 10px;
+	width:840px;
+}
+#listsub .subbox	{
+	float:left;
+	padding-left:22px;
+	width:265px;
+	opacity:0.8;
+	text-align:justify;
+}
+#listsub .subbox:hover	{
+	opacity:1;
+}
+#listsub .subbox:hover .subboxpic img	{
+	-webkit-filter: sepia(0%);
+}
+#listsub .subbox:first-child	{
+	padding-left:0px !important;
+}
+
+/* Thumbnail */
+#listsub .subbox .subboxpic	{
+	margin-bottom:30px;
+	background:url(../../images/loading/large.gif) no-repeat #b49c89 center;
+}
+#listsub .subbox .subboxpic img	{
+	width:265px;
+	height:200px;
+	-webkit-filter: sepia(100%);
+}
+
+/* Detail */
+#listsub .subbox h3	{
+	padding-bottom:25px;
+	font-size:13px;
+	text-align:center;
+}
+#listsub .subbox .subboxintro	{
+	font-size:11px;
+	line-height:21px;
+}

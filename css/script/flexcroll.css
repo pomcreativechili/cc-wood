@@ -1,0 +1,27 @@
+/* SCROLLBAR
+__________________________________________________ */
+
+.scrollgeneric {
+	top: 0px;
+	left: 0px;
+	line-height: 1px;
+	font-size: 1px;
+	position: absolute;
+}
+.vscrollerbase {
+	width: 4px;
+	background: #fff;
+}
+.vscrollerbar {
+	width: 4px;
+	background: #bdb3a9;
+}
+.scrollerjogbox {
+	top: auto;
+	left: auto;
+	bottom: 0px;
+	right: 0px;
+	width: 4px;
+	height: 4px;
+	background: #bdb3a9;
+}

@@ -1,0 +1,46 @@
+RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Default
+RewriteRule ^$ index.php [L]
+RewriteRule ^tp-admin$ admin/index.php [L]
+RewriteRule ^en$ index.php?lg=en [L]
+RewriteRule ^th$ index.php?lg=th [L]
+
+# Thai
+RewriteRule ^th/([A-z0-9-]*)$ index.php?pg=$1&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/pages/([0-9]*)$ index.php?pg=$1&pn=$2&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/success$ index.php?pg=$1&err=1&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/error$ index.php?pg=$1&err=2&lg=th [L]
+
+RewriteRule ^th/popup/([A-z0-9-]*)$ content/popup/default.php?spg=$1&lg=th [L]
+RewriteRule ^th/popup/([A-z0-9-]*)/success$ content/popup/default.php?spg=$1&err=1&lg=th [L]
+RewriteRule ^th/popup/([A-z0-9-]*)/error$ content/popup/default.php?spg=$1&err=2&lg=th [L]
+RewriteRule ^th/popup/([A-z0-9-]*)/already$ content/popup/default.php?spg=$1&err=3&lg=th [L]
+
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*).html$ content/popup/work.php?pg=$1&wpg=$2&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*)$ index.php?pg=$1&spg=$2&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*)/pages/([0-9]*)$ index.php?pg=$1&spg=$2&pn=$3&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*)$ index.php?pg=$1&spg=$2&sbpg=$3&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*).html$ index.php?pg=$1&spg=$2&npg=$3&lg=th [L]
+RewriteRule ^th/([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*).html$ index.php?pg=$1&spg=$2&srcpg=$3&srppg=$4&lg=th [L]
+
+# English
+RewriteRule ^([A-z0-9-]*)$ index.php?pg=$1 [L]
+RewriteRule ^([A-z0-9-]*)/pages/([0-9]*)$ index.php?pg=$1&pn=$2 [L]
+RewriteRule ^([A-z0-9-]*)/success$ index.php?pg=$1&err=1 [L]
+RewriteRule ^([A-z0-9-]*)/error$ index.php?pg=$1&err=2 [L]
+
+RewriteRule ^popup/([A-z0-9-]*)$ content/popup/default.php?spg=$1 [L]
+RewriteRule ^popup/([A-z0-9-]*)/success$ content/popup/default.php?spg=$1&err=1 [L]
+RewriteRule ^popup/([A-z0-9-]*)/error$ content/popup/default.php?spg=$1&err=2 [L]
+RewriteRule ^popup/([A-z0-9-]*)/already$ content/popup/default.php?spg=$1&err=3 [L]
+
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*)$ index.php?pg=$1&spg=$2 [L]
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*)/pages/([0-9]*)$ index.php?pg=$1&spg=$2&pn=$3 [L]
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*).html$ content/popup/work.php?pg=$1&wpg=$2 [L]
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*)$ index.php?pg=$1&spg=$2&sbpg=$3 [L]
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*).html$ index.php?pg=$1&spg=$2&npg=$3 [L]
+RewriteRule ^([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*)/([A-z0-9-]*).html$ index.php?pg=$1&spg=$2&srcpg=$3&srppg=$4 [L]

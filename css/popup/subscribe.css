@@ -1,0 +1,128 @@
+/* POPUP - SUBSCRIBE
+__________________________________________________ */
+
+*, html	{
+	margin:0px;
+	padding:0px;
+	outline:none;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../../font/raleway-regular-webfont.eot');
+    src: url('../../font/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/raleway-regular-webfont.woff') format('woff'),
+         url('../../font/raleway-regular-webfont.ttf') format('truetype'),
+         url('../../font/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body	{
+	margin:0px;
+	padding:0px;
+	font:normal 13px ralewayregular;
+	color:#292929;
+	background:url(../../images/content/bgpopup.jpg) no-repeat left bottom #fff;
+}
+
+a:link 		{ color:#292929; text-decoration: none; }
+a:visited 	{ color:#292929; text-decoration: none;  }
+a:hover 	{ color:#6b5543; text-decoration: none; }
+a:active 	{ color:#292929; text-decoration: none;  }
+
+#subscribe	{
+	padding:0px 40px 0px 40px;
+	width:240px;
+	height:520px;
+	overflow:hidden;
+}
+
+/* Information */
+#subscribe #info-area	{
+	padding-top:35px;
+}
+#info-area h2	{
+	margin-bottom:30px;
+	padding-bottom:12px;
+	width:240px;
+	font:normal 16px ralewayregular;
+	border-bottom:1px solid #bdb3a9;
+}
+#info-area h2 span	{
+	padding-bottom:10px;
+	border-bottom:3px solid #b5a77f;
+}
+#info-area #info-detail	{
+	line-height:21px;
+}
+#info-detail p	{
+	padding-bottom:15px;
+}
+#info-detail a:hover	{
+	text-decoration:underline;
+}
+
+
+/* Form */
+#subscribe #form-area	{
+	width:240px;
+}
+#form-area p	{
+	padding-bottom:8px;
+}
+#form-area .formtopic	{
+	padding-top:4px;
+	color:#292929;
+}
+#form-area .formspam	{
+	font-size:18px;
+	letter-spacing:1px;
+}
+#form-area .box	{
+	padding:8px 10px 8px 10px;
+	font:normal 13px ralewayregular;
+	width:218px;
+	color:#000;
+	border:none; 
+	background:#f5f3ef;
+	border:1px solid #e9e5dd;
+	-moz-box-shadow:    inset 0 0 10px #e9e5dc;
+	-webkit-box-shadow: inset 0 0 10px #e9e5dc;
+	box-shadow:         inset 0 0 10px #e9e5dc;
+	resize:none;
+	-webkit-appearance:none;
+}
+#form-area .boxans	{
+	width:30px !important;
+	text-align:center;
+}
+#form-area .btsubscribe,
+#form-area .btreset	{
+	padding:10px 0px 10px 0px; 
+	width:95px;
+	font:normal 12px ralewayregular;
+	text-transform:uppercase;
+	color:#fff;
+	border:none; 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+	-webkit-appearance:none;
+}
+#form-area .btsubscribe:hover,
+#form-area .btreset:hover	{
+	opacity:0.9;
+}
+#form-area .btsubscribe	{
+	background:#592c25;
+}
+#form-area .btreset	{
+	margin-left:10px;
+	background:#b5b5b5;
+}
+#form-area .formtip	{
+	padding-top:5px;
+	color:#292929;
+}
+#form-area .success	{ color:#55bb55; }
+#form-area .error 	{ color:#f26c4f; }

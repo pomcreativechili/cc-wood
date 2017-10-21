@@ -1,0 +1,212 @@
+/* SHOWROOM
+__________________________________________________ */
+
+
+/* LIST
+__________________________________________________ */
+
+#info #listshowroom	{
+	padding:0px 10px 0px 10px;
+	width:840px;
+}
+#listshowroom h3	{
+	padding-top:30px;
+	padding-bottom:30px;
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+	border-bottom:1px solid #bdb3a9; 
+	cursor:pointer;
+}
+#listshowroom .mnsrselect	{
+	color:#b06d3d !important;
+}
+#listshowroom .srcbox	{
+	position:relative;
+	padding-top:47px;
+	height:220px;
+	border-bottom:1px solid #bdb3a9;
+	display:none;
+	overflow:hidden;
+}
+#listshowroom .srcbox .next, #listshowroom .srcbox .srpnext,
+#listshowroom .srcbox .prev, #listshowroom .srcbox .srpprev	{
+	position:absolute;
+	width:20px;
+	height:125px;
+	display:block;
+	text-indent:-5000px;
+	z-index:101;
+}
+#listshowroom .srcbox .srpprev	{
+	background:url(../images/content/srprev.png) no-repeat;
+}
+#listshowroom .srcbox .next	{
+	margin-left:820px;
+}
+#listshowroom .srcbox .srpnext	{
+	margin-left:820px;
+	background:url(../images/content/srnext.png) no-repeat;
+}
+#listshowroom .srcbox .slides_container {
+	position:relative;
+	margin-left:40px;
+	width:800px;
+}
+#listshowroom .srcbox .slides_container .srpboxarea	{
+	width:800px;
+	height:220px;
+}
+#listshowroom .srcbox .slides_container .srpboxarea	.srpbox	{
+	float:left;
+	padding-right:34px;
+	width:124px;
+}
+#listshowroom .srcbox .slides_container .srpboxarea	.srpbox p {
+	padding-bottom:20px;
+	text-align:center;
+}
+#listshowroom .srcbox .slides_container .srpboxarea	.srpbox img {
+	width:122px;
+	height:122px;
+	border:1px solid #d9d9d9;
+	background:url(../images/loading/medium.gif) no-repeat #b49c89 center;
+}
+#listshowroom .srcbox .slides_container .srpboxarea	.srpbox img:hover {
+	opacity:0.9;
+}
+
+/* Selected Box */
+#listshowroom .srselect	{
+	display:block;
+}
+
+
+/* PRODUCT
+__________________________________________________ */
+
+#info #product	{
+	padding:30px 10px 50px 10px;
+	width:840px;
+}
+
+/* Picture */
+#product #productpic	{
+	float:left;
+	width:420px;
+	height:420px;
+	background:url(../images/loading/large.gif) no-repeat #b49c89 center;
+}
+#productpic img	{
+	max-width:418px;
+	max-height:418px;
+	background:url(../images/loading/large.gif) no-repeat #b49c89 center;
+	border:1px solid #dfdfdf;
+}
+#product #productinfo	{
+	float:left;
+	padding-left:70px;
+	width:350px;
+}
+
+/* Information */
+#productinfo #productdetail	{
+	padding-bottom:30px;
+	line-height:22px;
+	text-align:justify;
+}
+#productdetail h2	{
+	font-size:14px;
+	width:auto !important;
+}
+#productdetail h3	{
+	padding-bottom:20px;
+	font-size:13px;
+}
+#productdetail h4	{
+	font-size:13px;
+}
+#productdetail p	{
+	padding-bottom:20px;
+}
+#productdetail a:hover	{
+	text-decoration:underline;
+}
+#productdetail ul	{
+	padding-bottom:20px;
+	margin-left:20px;
+	list-style:square;
+	font-size:12px;
+}
+#productdetail li	{
+	padding-left:10px;
+	padding-bottom:3px;
+}
+
+/* Gallery */
+#productinfo #productgallery	{
+	padding-bottom:30px;
+	width:350px;
+}
+#productgallery h3	{
+	margin-bottom:25px;
+	padding-bottom:25px;
+	font-size:12px;
+	text-transform:uppercase;
+	border-bottom:1px solid #bdb3a9;
+}
+#productgallery .next, #productgallery .pdnext,
+#productgallery .prev, #productgallery .pdprev	{
+	position:absolute;
+	width:15px;
+	height:50px;
+	display:block;
+	text-indent:-5000px;
+	z-index:101; 
+}
+#productgallery .pdprev	{
+	background:url(../images/content/pdprev.png) no-repeat;
+}
+#productgallery .next	{
+	margin-left:335px;
+}
+#productgallery .pdnext	{
+	margin-left:335px;
+	background:url(../images/content/pdnext.png) no-repeat;
+}
+#productgallery .slides_container {
+	position:relative;
+	margin-left:24px;
+	width:298px;
+	height:50px;
+}
+#productgallery .slides_container p img	{
+	margin-left:12px;
+	width:50px;
+	height:50px;
+	background:url(../images/loading/small.gif) no-repeat #b49c89 center;
+	cursor:pointer;
+}
+#productgallery .slides_container p img:first-child	{
+	margin-left:0px !important;
+}
+#productgallery .slides_container p img:hover	{
+	opacity:0.9;
+}
+
+/* Page */
+#product #productpage	{
+	clear:both;
+	padding-top:40px;
+	font-size:12px;
+}
+#productpage p	{
+	width:50%;
+	float:left;
+}
+#productpage .productnext	{
+	text-align:right;
+}
+#productpage .nopage	{
+	width:100% !important;
+}

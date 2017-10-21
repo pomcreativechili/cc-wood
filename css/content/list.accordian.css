@@ -1,0 +1,93 @@
+/* INFO - ACCORDIAN
+__________________________________________________ */
+
+#infoarea #listacc	{
+	padding:0px 10px 0px 10px;
+	width:840px;
+}
+#listacc h3	{
+	border-bottom:1px solid #bdb3a9; 
+	padding-top:30px;
+	padding-bottom:30px;
+	width:840px !important;
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+}
+#listacc .mnlsselect	{
+	color:#6b8807 !important;
+}
+#listacc .listbox	{
+	padding-top:45px;
+	padding-bottom:45px;
+	width:840px;
+	height:420px;
+	border-bottom:1px solid #bdb3a9;
+}
+
+/* Thumbnail */
+#listacc .listbox .listboxpic	{
+	float:left;
+	padding-right:60px;
+	width:420px;
+}
+#listacc .listbox .listboxpic img	{
+	width:420px;
+	height:420px;
+	background:url(../../images/loading/large.gif) no-repeat #b49c89 center;
+}
+
+/* Detail */
+#listacc .listbox .listboxdetail	{
+	float:left;
+	padding-right:10px;
+	width:350px;
+	height:420px;
+	font-size:12px;
+	line-height:22px;
+	text-align:justify;
+	overflow:auto;
+}
+#listacc .listbox .listboxdetail h3	{
+	padding-bottom:20px;
+	font-size:13px;
+}
+#listacc .listbox .listboxdetail h4	{
+	font-size:13px;
+}
+#listacc .listbox .listboxdetail p	{
+	padding-bottom:20px;
+}
+#listacc .listbox .listboxdetail a:hover	{
+	text-decoration:underline;
+}
+#listacc .listbox .listboxdetail ul	{
+	padding-bottom:20px;
+	margin-left:20px;
+	list-style:square;
+	font-size:12px;
+}
+#listacc .listbox .listboxdetail li	{
+	padding-left:10px;
+	padding-bottom:3px;
+}
+#listacc .listbox .listboxdetail .listbutton	{
+	padding-top:5px;
+	padding-bottom:0px;
+	font-size:12px;
+	line-height:12px;
+}
+#listacc .listbox .listboxdetail .listbutton a	{
+	display:inline-block;
+	padding-left:30px;
+	color:#fff;
+	text-decoration:none;
+	height:28px;
+	background:url(../../images/content/btlist.jpg) no-repeat;
+}
+#listacc .listbox .listboxdetail .listbutton a span	{
+	padding:8px 13px 0px 13px;
+	height:20px;
+	display:inline-block;
+	background:#604f45;
+}

@@ -1,0 +1,150 @@
+*,html	{
+	margin:0px;
+	padding:0px;
+	outline:none;
+}
+
+/* FONT FACE
+__________________________________________________ */
+
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('../../font/raleway-extralight-webfont.eot');
+    src: url('../../font/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/raleway-extralight-webfont.woff') format('woff'),
+         url('../../font/raleway-extralight-webfont.ttf') format('truetype'),
+         url('../../font/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../../font/raleway-regular-webfont.eot');
+    src: url('../../font/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/raleway-regular-webfont.woff') format('woff'),
+         url('../../font/raleway-regular-webfont.ttf') format('truetype'),
+         url('../../font/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body	{
+	margin:0px;
+	padding:0px;
+	font-family:ralewayextralight;
+	font-size:14px;
+	background:#fff;
+	color:#ad9a8a;
+}
+
+a:link 		{ color: #ad9a8a; text-decoration: none; }
+a:visited 	{ color: #ad9a8a; text-decoration: none;  }
+a:hover 	{ color: #592c25; text-decoration: underline; }
+
+
+/* CONTENT
+__________________________________________________ */
+
+#content	{
+	margin:auto;
+	width:960px;
+}
+
+/* HEADER
+__________________________________________________ */
+
+#content #header	{
+	width:960px;
+	height:150px;
+	background:url(../images/login/bgheader.jpg) no-repeat;
+}
+#header h1,
+#header h2,
+#header h3	{
+	position:absolute;
+	text-indent:-5000px;
+}
+
+
+/* LOGIN FORM
+__________________________________________________ */
+
+#content #loginform	{
+	float:right;
+	padding-top:80px;
+	padding-left:170px;
+	width:370px;
+}
+#loginform h2	{
+	position:absolute;
+	width:0px;
+	text-indent:-5000px;
+}
+#loginform p	{
+	padding-bottom:10px;
+}
+#loginform .formtopic	{
+	padding-top:10px;
+	color:#592c25;
+	text-transform:uppercase;
+}
+#loginform .box 	{
+	padding:10px;
+	font:normal 16px ralewayregular;
+	width:198px;
+	color:#000;
+	border:none; 
+	background:#f5f3ef;
+	border:1px solid #e9e5dd;
+	-moz-box-shadow:    inset 0 0 10px #e9e5dc;
+	-webkit-box-shadow: inset 0 0 10px #e9e5dc;
+	box-shadow:         inset 0 0 10px #e9e5dc;
+}
+#loginform .formbutton	{
+	padding-top:15px;
+}
+#loginform .formbutton .btlogin,
+#loginform .formbutton .btreset	{
+	padding:12px 0px 12px 0px; 
+	width:105px;
+	font:normal 14px ralewayextralight;
+	text-transform:uppercase;
+	color:#fff;
+	border:none; 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+}
+#loginform .formbutton .btlogin	{
+	background:#592c25;
+}
+#loginform .formbutton .btreset	{
+	margin-left:10px;
+	background:#717171;
+}
+#loginform .error	{
+	padding-bottom:40px;
+	color:#f26c4f !important;
+}
+
+/* PICTURE
+__________________________________________________ */
+
+#content #loginpic	{
+	float:right;
+	width:420px;
+	height:475px;
+	background:url(../images/login/pic.jpg) no-repeat;
+}
+
+/* COPYRIGHT
+__________________________________________________ */
+
+.copyright	{
+	clear:both;
+	padding-top:100px;
+	padding-bottom:40px;
+	font-size:11px;
+	text-align:center;
+}

@@ -1,0 +1,183 @@
+/* POPUP - CONTACT
+__________________________________________________ */
+
+*, html	{
+	margin:0px;
+	padding:0px;
+	outline:none;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../../font/raleway-regular-webfont.eot');
+    src: url('../../font/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/raleway-regular-webfont.woff') format('woff'),
+         url('../../font/raleway-regular-webfont.ttf') format('truetype'),
+         url('../../font/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body	{
+	margin:0px;
+	padding:0px;
+	font:normal 13px ralewayregular;
+	color:#292929;
+	background:url(../../images/content/bgpopup.jpg) no-repeat left bottom #fff;
+}
+
+a:link 		{ color:#292929; text-decoration: none; }
+a:visited 	{ color:#292929; text-decoration: none;  }
+a:hover 	{ color:#6b5543; text-decoration: none; }
+a:active 	{ color:#292929; text-decoration: none;  }
+
+#contact	{
+	width:960px;
+	height:460px;
+	overflow:hidden;
+}
+
+/* Information */
+#contact #contactinfo	{
+	float:left;
+	padding-top:35px;
+	padding-left:50px;
+	width:420px;
+}
+#contactinfo h2	{
+	margin-bottom:30px;
+	padding-bottom:12px;
+	width:420px;
+	font:normal 16px ralewayregular;
+	border-bottom:1px solid #bdb3a9;
+}
+#contactinfo h2 span	{
+	padding-bottom:10px;
+	padding-right:60px;
+	border-bottom:3px solid #b5a77f;
+}
+#contactinfo #contactdetail	{
+	padding-right:40px;
+	line-height:21px;
+}
+#contactdetail h3	{
+	padding-bottom:15px;
+	font-size:13px;
+}
+#contactdetail h4	{
+	font-size:13px;
+}
+#contactdetail p	{
+	padding-bottom:15px;
+}
+#contactdetail a:hover	{
+	text-decoration:underline;
+}
+#contactdetail ul	{
+	padding-bottom:15px;
+	margin-left:20px;
+	list-style:square;
+	font-size:12px;
+}
+#contactdetail li	{
+	padding-left:10px;
+	padding-bottom:3px;
+}
+
+
+/* Form */
+#contact #contactform	{
+	float:left;
+	padding-top:35px;
+	padding-right:50px;
+	width:440px;
+}
+#contactform h3	{
+	margin-bottom:25px;
+	padding-bottom:12px;
+	width:440px;
+	font:normal 16px ralewayregular;
+	border-bottom:1px solid #bdb3a9;
+}
+#contactform h3 span	{
+	padding-bottom:10px;
+	padding-right:60px;
+	border-bottom:3px solid #b5a77f;
+}
+#contactform .formcol	{
+	float:left;
+	margin-left:30px;
+	width:205px;
+}
+#contactform .formcolclear	{
+	margin-left:0px !important ;
+}
+#contactform p	{
+	padding-bottom:8px;
+}
+#contactform .formtopic	{
+	clear:both;
+	padding-top:4px;
+	color:#292929;
+}
+#contactform .formspam	{
+	font-size:18px;
+	letter-spacing:1px;
+}
+#contactform .box	{
+	padding:8px 10px 8px 10px;
+	font:normal 13px ralewayregular;
+	width:418px;
+	color:#000;
+	border:none; 
+	background:#f5f3ef;
+	border:1px solid #e9e5dd;
+	-moz-box-shadow:    inset 0 0 10px #e9e5dc;
+	-webkit-box-shadow: inset 0 0 10px #e9e5dc;
+	box-shadow:         inset 0 0 10px #e9e5dc;
+	resize:none;
+	-webkit-appearance:none;
+}
+#contactform .boxarea 	{
+	height:70px;
+}
+#contactform .boxcol	{
+	width:183px !important
+}
+#contactform .boxans	{
+	width:30px !important;
+	text-align:center;
+}
+#contactform .btsend,
+#contactform .btreset	{
+	padding:10px 0px 10px 0px; 
+	width:95px;
+	font:normal 12px ralewayregular;
+	text-transform:uppercase;
+	color:#fff;
+	border:none; 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+	-webkit-appearance:none;
+}
+#contactform .btsend:hover,
+#contactform .btreset:hover	{
+	opacity:0.9;
+}
+#contactform .btsend	{
+	background:#592c25;
+}
+#contactform .btreset	{
+	margin-left:10px;
+	background:#b5b5b5;
+}
+#contactform .formtip	{
+	padding-top:5px;
+	color:#292929;
+}
+#contactform .success	{ color:#55bb55; }
+#contactform .error 	{ color:#f26c4f; }
+
+.clearline	{
+	clear:both;
+}
