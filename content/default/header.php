@@ -1,4 +1,4 @@
-<div id="header"<?php echo $headercss;?>>
+<div id="header">
 	<div id="logo">
         <div id="logoarea">
             <h1>
@@ -21,7 +21,7 @@
             </ul>
         </div>
 	</div>
-    <div id="banner"<?php echo $headercss;?>><?php include("banner.php");?></div>
+    <div id="banner"><?php include("banner.php");?></div>
     <div id="menuarea">
         <ul id="topmenu">
             <li><a href="<?php echo $url.$lgurl;?>"<?php if ($pid == "0000") echo ' class="mnselect"';?>>Home</a></li>

@@ -236,10 +236,10 @@ __________________________________________________ */
 }
 #banner #bannerpage	{
 	position:absolute;
-	left:50%;
-	margin-left:-840px;
-	width:1680px;
-	height:385px;
+	width: 100%;
+	height: inherit;
+	background: no-repeat center;
+	background-size: cover;
 	z-index:1;
 }
 

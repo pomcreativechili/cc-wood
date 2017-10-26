@@ -7,7 +7,7 @@
 	
 	// Banner picture
 	if ($pg != "")	{
-		echo '<p id="bannerpage"><img src="'.$ppic.'" alt="'.$ptopic.'" /></p>';
+		echo '<p id="bannerpage" style="background-image: url('.$ppic.');" /></p>';
 		
 	// Parallax Slideshow
 	}	else if (!strstr($_SERVER['HTTP_USER_AGENT'],'MSIE') or strstr($_SERVER['HTTP_USER_AGENT'],'MSIE 10.0'))	{
