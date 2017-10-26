@@ -3,10 +3,8 @@ __________________________________________________ */
 
 .da-slider	{
 	position:absolute;
-	left:50%;
-	margin-left:-840px;
-	width: 1680px;
-	height: 505px;
+	width: 100%;
+	height: 100%;
 	-webkit-transition: background-position 1s ease-out 0s;
 	-moz-transition: background-position 1s ease-out 0s;
 	-o-transition: background-position 1s ease-out 0s;
@@ -18,8 +16,8 @@ __________________________________________________ */
 .da-slide	{
 	position: absolute;
 	top: 0px;
-	width: 100%;
-	height: 505px;
+	width: inherit;
+	height: inherit;
 }
 .da-slide-current							{ z-index: 1000; }
 .da-slider-fb .da-slide						{ left: 100%; }
@@ -62,7 +60,12 @@ __________________________________________________ */
 	font:normal 48px ralewayextralight;
 	color:#fff;
 }
-.slide-bg,
+.slide-bg {
+	width: inherit;
+	height: inherit;
+	background: no-repeat center;
+	background-size: cover;
+}
 .slide-bg img	{ 
 	width:1680px;
 	height:505px;

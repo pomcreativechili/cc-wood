@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['sess_url'] = "http://www.thaweephan.co.th";
+	$_SESSION['sess_url'] = "http://dev.thaweephanwoodservice.com";
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];

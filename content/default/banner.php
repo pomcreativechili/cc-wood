@@ -21,10 +21,7 @@
 		while ($sl = mysql_fetch_array($resultsl))	{
 			echo '
 			<div class="da-slide">
-				<h3 class="slide-text1">'.$sl[$sltext1].'</h3>
-				<h3 class="slide-text2">'.$sl[$sltext2].'</h3>
-				<p class="slide-url"><a href="'.$sl[$slurl].'"><span>'.$sl[$sltext3].'</span></a></p>
-				<p class="slide-bg"><img src="'.$slpath.'/'.$sl[slpic].'" alt="" /></p>
+				<p class="slide-bg" style="background-image: url('.$slpath.'/'.$sl[slpic].');"></p>
 			</div>
 			';
 		}
