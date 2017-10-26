@@ -263,7 +263,7 @@ __________________________________________________ */
 #footer	{
 	position:relative;
 	width:100%;
-	background:#6b5543;
+	background:#303030;
 }
 #footer #footerarea	{
 	margin:auto;
@@ -286,10 +286,18 @@ __________________________________________________ */
 }
 #maparea .mapshadow	{
 	bottom:0px;
-	width:960px;
+	width:1200px;
 	height:20px;
+	margin-left: -120px;
+	margin-right: -120px;
 	background:url(../images/default/bgmap.png) no-repeat;
 	z-index:20;
+}
+#maparea .mapshadow-left	{
+	background-position: left 0;
+}
+#maparea .mapshadow-right	{
+	background-position: right 0;
 }
 #maparea .mapup	{
 	margin-left:447px;
@@ -308,10 +316,11 @@ __________________________________________________ */
 }
 #maparea .map	{
 	left:50%;
-	margin-left:-368px;
-	width:736px;
+	margin-left:-405px;
+	width:810px;
 	height:53px;
 	background:url(../images/default/map.png) no-repeat;
+	background-size: 100% auto;
 	z-index:10;
 }
 #maparea a	{
@@ -327,16 +336,15 @@ __________________________________________________ */
 #footerarea #footermenu	{
 	margin:auto;
 	padding-top:35px;
-	width:600px;
 	list-style:none;
+	text-align: center;
 }
 #footermenu li	{
-	float:left;
-	padding:0px 12px 0px 12px;
+	display: inline-block;
+	padding:0px 35px;
 	text-align:center;
 }
 #footermenu a	{
-	text-transform:uppercase;
 	color:#fff;
 }
 #footermenu a:hover,
@@ -348,13 +356,12 @@ __________________________________________________ */
 #footerarea #bottommenu	{
 	margin:auto;
 	padding-top:45px;
-	width:850px;
-	font-size:10px;
-	text-transform:uppercase;
+	font-size:12px;
 	list-style:none;
+	text-align: center;
 }
 #bottommenu li	{
-	float:left;
+	display: inline-block;
 	padding:0px 14px 0px 14px;
 	text-align:center;
 	border-right:1px solid #b49c89;
@@ -363,11 +370,11 @@ __________________________________________________ */
 	border:none;
 }
 #bottommenu a	{
-	color:#b49c89;
+	color:#fff;
 }
 #bottommenu a:hover,
 #bottommenu .mnselect	{
-	color:#e2d9d2;
+	font-weight: 700;
 }
 
 /* Copyright */
@@ -375,11 +382,12 @@ __________________________________________________ */
 	padding-top:10px;
 	padding-bottom:35px;
 	text-align:center;
-	font-size:11px;
-	color:#ad9a8a;
+	font-size:12px;
+	color:#fff;
+	opacity: 0.3;
 }
 #copyright a	{
-	color:#ad9a8a;
+	color:#fff;
 }
 #copyright a:hover	{
 	color:#e2d9d2;

@@ -5,14 +5,15 @@
 	<div id="footerarea">
     	<p id="maparea">
         	<span class="mapup"></span><span class="mapdown"></span>
-            <span class="mapshadow"></span>
+            <span class="mapshadow mapshadow-left"></span>
+            <span class="mapshadow mapshadow-right"></span>
             <span class="map"></span>
             <a href="https://www.google.com/maps/ms?msid=215878593138040516307.0004d360e7c2ee4d90fe5&msa=0&ll=18.827666,98.992996&spn=0.184248,0.338173" target="_blank">Click to view Thaweephan Location on Google Maps</a>
         </p>
         <ul id="footermenu">
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['8000']['url'];?>"<?php if ($pid == "8000") echo ' class="mnselect"';?>>News &amp; Recognition</a></li>
+            <!-- <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['8000']['url'];?>"<?php if ($pid == "8000") echo ' class="mnselect"';?>>News &amp; Recognition</a></li> -->
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['9000']['url'];?>"<?php if ($pid == "9000") echo ' class="mnselect"';?>>Join Our Team</a></li>
-            <li><a href="<?php echo $url."/pdf/Thaweephan_Brochure".$sess_lg.".pdf";?>" target="_blank">Download E-Brochure</a></li>
+            <li><a href="<?php echo $url."/pdf/Thaweephan_Brochure".$sess_lg.".pdf";?>" target="_blank">Downloads</a></li>
             <li><a href="<?php echo $url.$lgurl.'/popup/'.$mntxt['0002']['url'];?>" class="popupsubscribe">Newsletter</a></li>
         </ul>
         <div class="clearline"></div>
