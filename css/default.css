@@ -123,39 +123,42 @@ __________________________________________________ */
 /* Social */
 #header #social	{
 	position:fixed;
-	top:125px;
-	right:0px;
-	padding:15px 16px 15px 16px;
-	width:22px;
-	height:183px;
+	top:140px;
+	right: calc(50vw - 480px - 120px);
+	width:32px;
 	list-style:none;
-	background:url(../images/default/social.jpg) no-repeat;
 	z-index:200;
 }
 #social li a	{
-	margin-bottom:6px;
-	width:22px;
-	height:21px;
+	margin: 5px 0;
+	width:32px;
+	height:32px;
 	display:block;
 	text-indent:-5000px;
+	background: no-repeat center;
 }
-#social .mnfacebook	{ height:19px; }
-#social .mndownload	{ height:22px; margin-bottom:15px; }
-#social .mncontact	{ margin-bottom:0px; height:67px; }
+#social li a:hover	{
+	opacity: 0.5;
+}
+#social .mnfacebook	{ background-image: url(../images/default/icon-facebook.png); }
+#social .mnlinkedin	{ background-image: url(../images/default/icon-linkedin.png); }
+#social .mndownload	{ background-image: url(../images/default/icon-download.png); }
+#social .mncontact	{ background-image: url(../images/default/icon-email.png); }
 
 /* Topmenu */
 #header #menuarea	{
-	position:absolute;
-	bottom:0px;
 	width:100%;
-	background:url(../images/default/bgmenu.png) repeat;
 	z-index:100;
 }
 #header #topmenu	{
-	margin:auto;
+	margin: 0 auto;
 	width:960px;
-	font-size:12px;
-	text-transform:uppercase;
+	font-size:14px;
+}
+#header #topmenu:after {
+	content: '';
+	clear: both;
+	display: block;
 }
 #topmenu li	{
 	float:left;
@@ -172,9 +175,8 @@ __________________________________________________ */
 #topmenu li:nth-child(8) { width:130px; }
 #topmenu a	{
 	display:block;
-	padding:15px 0px 15px 0px;
+	padding:17px 0px;
 	width:100%;
-	color:#fff;
 	text-decoration:none;
 }
 #topmenu li:hover a,
@@ -185,13 +187,17 @@ __________________________________________________ */
 	z-index:11;
 }
 
+#topmenu li:hover > a,
+#topmenu .mnselect	{
+	font-weight: 700;
+}
+
 /* Topmenu - Sub Menu */
 #topmenu .submenu	{
 	position:absolute;
 	padding-top:3px;
 	width:auto;
 	min-width:180px;
-	font-size:11px;
 	-webkit-box-shadow: 2px 2px 2px -2px #bbb;
 	-moz-box-shadow: 2px 2px 2px -2px #bbb;
 	box-shadow: 2px 2px 2px -2px #bbb;
