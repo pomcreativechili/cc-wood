@@ -1,5 +1,5 @@
 <div id="wrapper"></div>
-<h2 class="infomenutopic"><?php echo $ptopic;?></h2>
+<!-- <h2 class="infomenutopic"><?php echo $ptopic;?></h2> -->
 
 <div id="infomenu"<?php if ($npg != "") echo ' class="nomargin"';?>>
     <ul>
@@ -27,5 +27,4 @@
         }
     ?>
     </ul>
-    <div class="clearline"></div>
 </div>

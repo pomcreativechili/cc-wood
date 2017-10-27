@@ -38,6 +38,14 @@ __________________________________________________ */
 	position:relative;
 	width:100%;
 }
+#header .header-line	{
+	display: block;
+	width: 100%;
+	max-width: 960px;
+	height: 2px;
+	margin: 0 auto;
+	background-color: #eee;
+}
 .headerpage	{
 	height:385px !important;
 }

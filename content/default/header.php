@@ -21,7 +21,12 @@
             </ul>
         </div>
 	</div>
+    <?php 
+    if ($pg == "" || end(explode('resources/pages/', $ppic)) != "") { ?>
     <div id="banner"><?php include("banner.php");?></div>
+    <?php } else { ?>
+    <div class="header-line"></div>
+    <?php } ?>
     <div id="menuarea">
         <ul id="topmenu">
             <li><a href="<?php echo $url.$lgurl;?>"<?php if ($pid == "0000") echo ' class="mnselect"';?>>Home</a></li>
@@ -33,7 +38,7 @@
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['1000']['url'].'/'.$mntxt['1004']['url'];?>"><?php echo $mntxt['1004']['text'];?></a></li>
                 </ul>
             </li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['2000']['url'];?>"<?php if ($pid == "2000") echo ' class="mnselect"';?>>Showroom</a>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['2000']['url'];?>"<?php if ($pid == "2000") echo ' class="mnselect"';?>>Products</a>
                 <ul class="submenu">
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['2000']['url'].'/'.$mntxt['2001']['url'];?>"><?php echo $mntxt['2001']['text'];?></a></li>
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['2000']['url'].'/'.$mntxt['2002']['url'];?>"><?php echo $mntxt['2002']['text'];?></a></li>
@@ -43,13 +48,13 @@
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['2000']['url'].'/'.$mntxt['2006']['url'];?>"><?php echo $mntxt['2006']['text'];?></a></li>
                 </ul>
             </li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['3000']['url'];?>"<?php if ($pid == "3000") echo ' class="mnselect"';?>>Building Services</a>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['3000']['url'];?>"<?php if ($pid == "3000") echo ' class="mnselect"';?>>Services</a>
                 <ul class="submenu">
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['3000']['url'].'/'.$mntxt['3001']['url'];?>"><?php echo $mntxt['3001']['text'];?></a></li>
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['3000']['url'].'/'.$mntxt['3002']['url'];?>"><?php echo $mntxt['3002']['text'];?></a></li>
                 </ul>
             </li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['4000']['url'];?>"<?php if ($pid == "4000") echo ' class="mnselect"';?>>Our Work</a></li>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['4000']['url'];?>"<?php if ($pid == "4000") echo ' class="mnselect"';?>>Projects</a></li>
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'];?>"<?php if ($pid == "5000") echo ' class="mnselect"';?>>Quality &amp; Care</a>
                 <ul class="submenu">
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5001']['url'];?>"><?php echo $mntxt['5001']['text'];?></a></li>

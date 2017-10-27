@@ -59,5 +59,6 @@
 	}	else if ($srcpg != "" and $srppg != "")	{
 		include("content/showroom/detail.php");
 	}
-?>    
+?>
+	<div class="clearline"></div>
 </div>

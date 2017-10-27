@@ -3,7 +3,7 @@ __________________________________________________ */
 
 #contentarea #info	{
 	padding:50px 15px 100px 15px;
-	width:960px;
+	width:930px;
 	min-height:400px;
 	position:relative;
 }
@@ -23,9 +23,12 @@ __________________________________________________ */
 
 /* Menu */
 #info #infomenu	{
-	margin:0px auto 50px auto;
-	width:960px;
-	background:url(../../images/content/bgmenu.jpg) bottom repeat-x;
+	float: left;
+	width:180px;
+}
+#info #infoload	{
+	float: right;
+	width: 750px;
 }
 #info .nomargin	{
 	margin-bottom:20px !important;
@@ -62,7 +65,7 @@ __________________________________________________ */
 #info h2	{
 	margin:auto;
 	padding-bottom:25px;
-	width:960px;
+	width:100%;
 	font-size:16px;
 }
 #info .infotopic	{
@@ -89,12 +92,12 @@ __________________________________________________ */
 
 #info #infoarea	{
 	float:left;
-	width:638px;
+	width:608px;
 }
 #info .nogallery	{
 	float:none !important;
 	padding:0px 10px 0px 10px !important;
-	width:960px !important;
+	width:100% !important;
 }
 
 /* Information */
