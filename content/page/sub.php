@@ -1,9 +1,7 @@
 <div id="infoarea" class="nogallery">
+	<?php echo '<h2><a href="'.$url.$lgurl.'/'.$purl.'#'.$purl.'/'.$sp[purl].'">'.$sptopic.'</a> | '.$sbptopic.'</h2>'; ?>
     <div id="infodetail">
-    <?php
-        echo '<h2><a href="'.$url.$lgurl.'/'.$purl.'#'.$purl.'/'.$sp[purl].'">'.$sptopic.'</a> &nbsp;&gt;&nbsp; <span>'.$sbptopic.'</span></h2>';
-        if ($sbpdetail != "") echo $sbpdetail;
-    ?>
+    <?php if ($sbpdetail != "") echo $sbpdetail; ?>
     </div>
 </div>
 

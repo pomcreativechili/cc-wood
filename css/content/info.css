@@ -27,7 +27,7 @@ __________________________________________________ */
 	width:180px;
 	padding: 46px 20px 0 0;
 }
-#info #infoload	{
+#info #infoload, #info #infomenu + #infoarea,  #infoarea + #listacc {
 	float: right;
 	width: 710px;
 	padding: 0 10px;
@@ -98,13 +98,13 @@ __________________________________________________ */
 	float:left;
 	width:608px;
 }
-#info #infoload #infoarea	{
+#info #infoload #infoarea, #info #infoload #listacc	{
 	width: 100%;
 }
 #info .nogallery	{
-	float:none !important;
+	/*float:none !important;
 	padding:0px 10px 0px 10px !important;
-	width:100% !important;
+	width:100% !important;*/
 }
 
 /* Information */

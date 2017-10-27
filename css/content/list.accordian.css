@@ -3,13 +3,12 @@ __________________________________________________ */
 
 #infoarea #listacc	{
 	padding:0px 10px 0px 10px;
-	width:840px;
 }
 #listacc h3	{
 	border-bottom:1px solid #bdb3a9; 
 	padding-top:30px;
 	padding-bottom:30px;
-	width:840px !important;
+	width:100%;
 	font-size:14px;
 	font-weight:normal;
 	text-align:center;
@@ -20,7 +19,7 @@ __________________________________________________ */
 #listacc .listbox	{
 	padding-top:45px;
 	padding-bottom:45px;
-	width:840px;
+	width:100%;
 	height:420px;
 	border-bottom:1px solid #bdb3a9;
 }
