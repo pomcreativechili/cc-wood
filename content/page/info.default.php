@@ -19,7 +19,7 @@
 			echo '<h2>'.$ptopic.'</h2>';
 			if ($pdetail != "") echo '<div id="infodetail">'.$pdetail.'</div>';
 		}	else if ($spg != "" or $ptype == "1")	{
-			echo '<h2>'.$sptopic.'</h2>';
+			echo '<h2>'.$ptopic.' | '.$sptopic.'</h2>';
 			if ($spdetail != "") echo '<div id="infodetail">'.$spdetail.'</div>';
 		}	else	{
 			if ($pdetail != "") echo '<div id="infodetail">'.$pdetail.'</div>';
@@ -32,7 +32,7 @@
 		echo '</div>';
 		
 		// Gallery
-		if ($pgallery != "0" or ($spid != "8001" and $spid != "" and $spgallery != "0")) include("content/page/info.gallery.php");
+		if (($pgallery != "0" or ($spid != "8001" and $spid != "" and $spgallery != "0")) and $ptype != "1") include("content/page/info.gallery.php");
 	
 		// List
 		if ($splist == "1") 						include("content/list/list.accordian.php");
