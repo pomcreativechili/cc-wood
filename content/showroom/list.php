@@ -5,6 +5,7 @@ $(document).ready(function()	{
 	$("#listshowroom .srtopic:nth-child(1)").next().show();
 	<?php } ?>
 	
+	$("#listshowroom .srcbox").not(':first').fadeOut(1);
 	$("#listshowroom .srtopic").click(function(){
 		if ($(this).hasClass("mnsrclose")) {
 			$(this).removeClass("mnsrclose mnsrselect");
@@ -30,6 +31,7 @@ $(document).ready(function()	{
 	
 	$ctitle = "ctitle".$sess_lg;
 	$pdtitle = "pdtitle".$sess_lg;
+	$pddetail = "pddetail".$sess_lg;
 	$pdpath = $url."/admin/resources/product";
 	
 	if ($totalsrc > 0)	{
@@ -43,12 +45,17 @@ $(document).ready(function()	{
 					$srtp = "";
 					$srbox = "";
 				}
+
+				// echo '
+				// <a id="sr'.$src[cid].'" href="#sr'.$src[cid].'" name="sr'.$src[cid].'" class="srtopic'.$srtp.'"><h3>'.$src[$ctitle].'</h3></a>
+				// <div class="srcbox'.$srbox.'">
+				// <span class="srpprev"></span>
+				// <span class="srpnext"></span>
+				// ';
 				
 				echo '
-				<a href="#sr'.$src[cid].'" name="sr'.$src[cid].'" class="srtopic'.$srtp.'"><h3>'.$src[$ctitle].'</h3></a>
+				<a id="sr'.$src[cid].'" href="#sr'.$src[cid].'" name="sr'.$src[cid].'" class="srtopic'.$srtp.'"><h3>'.$src[$ctitle].'</h3></a>
 				<div class="srcbox'.$srbox.'">
-				<span class="srpprev"></span>
-				<span class="srpnext"></span>
 				';
 	
 				// Product
@@ -57,25 +64,66 @@ $(document).ready(function()	{
 				$totalsrp = mysql_num_rows($resultsrp);
 	
 				if ($totalsrp > 0)	{
-					$srpnum = 1;
-					$srpcount = 1;
-					if ($totalsrp > 5) echo '<a href="#" class="prev"></a><a href="#" class="next"></a>';
+					// $srpnum = 1;
+					// $srpcount = 1;
+					// if ($totalsrp > 5) echo '<a href="#" class="prev"></a><a href="#" class="next"></a>';
 					
-					echo '<div class="slides_container">';
-					while ($srp = mysql_fetch_array($resultsrp))	{
-						$srpurl = $url.$lgurl.'/'.$purl.'/'.$sp[purl].'/'.$src[curl].'/'.$srp[pdurl].'.html';
-						if ($srpnum == "1") echo '<div class="srpboxarea">';
-						echo '
-						<div class="srpbox">
-							<p><a href="'.$srpurl.'"><img src="'.$pdpath.'/'.$srp[pdpic].'" alt="'.$srp[$pdtitle].'"/></a></p>
-							<p><a href="'.$srpurl.'">'.$srp[$pdtitle].'</a></p>
-						</div>
-						';
-						if ($srpnum == 5 or $srpcount == $totalsrp) { echo '<div class="clearline"></div></div>'; $srpnum = 0; }
-						$srpnum++;
-						$srpcount++;
-					}
-					echo '</div>';
+					// echo '<div class="slides_container">';
+					// while ($srp = mysql_fetch_array($resultsrp))	{
+					// 	$srpurl = $url.$lgurl.'/'.$purl.'/'.$sp[purl].'/'.$src[curl].'/'.$srp[pdurl].'.html';
+					// 	if ($srpnum == "1") echo '<div class="srpboxarea">';
+					// 	echo '
+					// 	<div class="srpbox">
+					// 		<p><a href="'.$srpurl.'"><img src="'.$pdpath.'/'.$srp[pdpic].'" alt="'.$srp[$pdtitle].'"/></a></p>
+					// 		<p><a href="'.$srpurl.'">'.$srp[$pdtitle].'</a></p>
+					// 	</div>
+					// 	';
+					// 	if ($srpnum == 5 or $srpcount == $totalsrp) { echo '<div class="clearline"></div></div>'; $srpnum = 0; }
+					// 	$srpnum++;
+					// 	$srpcount++;
+					// }
+					// echo '</div>';
+?>
+					<div id="product">
+						<!-- <p id="productpic"><a href="<?php echo $pdpath.'/'.str_replace('th','',$srp[pdpic]);?>" class="productzoom"><img src="<?php echo $pdpath.'/'.str_replace('th','',$srp[pdpic]);?>" alt="<?php echo $srp[$pdtitle];?>" /></a></p> -->
+						<?php while ($srp = mysql_fetch_array($resultsrp))	{
+							$sqlsrg = "select * from tb_gallery WHERE pdid='$srp[pdid]' AND pid='$spid' AND gtype='5' AND gpage='$src[cid]' order by abs(gsort)";
+							$resultsrg = mysql_query($sqlsrg, $dgz) or die(mysql_error());
+							$totalsrg = mysql_num_rows($resultsrg);
+						?>
+					    <div class="productinfo">
+					    	<?php if ($totalsrg > 0) { ?>
+					        <div id="productgallery-<?php echo $srp[pdid]; ?>" class="productgallery">
+					            <span class="pdprev"></span>
+					            <span class="pdnext"></span>
+					            <?php if ($totalsrg > 5) { ?>
+					            <a href="#" class="prev"></a>
+					            <a href="#" class="next"></a>
+					            <?php } ?>
+					            <div class="slides_container">
+					            <?php 
+									$srgnum = 1;
+									$srgalt = "galt".$sess_lg;
+									while ($srg = mysql_fetch_array($resultsrg))	{
+										if ($srgnum == 1) echo '<p>';
+										echo '<img src="'.$pdpath.'/gallery/'.$srg[gthumb].'" alt="'.$srg[$srgalt].'" />';
+										if ($srgnum == 5) { echo '</p>'; $srgnum = 0; }
+										$srgnum++;
+									}
+								?>
+					            </div>
+					        </div>
+					        <?php } ?>
+					    	<div class="productdetail">
+					        <?php 
+								echo '<h2>'.$srp[$pdtitle].'</h2>';
+								if ($srp[$pddetail] != "") echo $srp[$pddetail];
+							?>
+					        </div>
+					    </div>
+					    <?php } ?>
+					</div>
+<?php
 				}
 				
 				echo '</div>';

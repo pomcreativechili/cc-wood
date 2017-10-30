@@ -18,9 +18,9 @@
 <meta name="keywords" content="<?php echo $pkeys;?>" />
 
 <?php if ($sess_lg == '_th') { ?>
-<link href="https://fonts.googleapis.com/css?family=Prompt:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prompt:400,400i,600,600i,700" rel="stylesheet">
 <?php } else { ?>
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,600i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
 <?php } ?>
 <link href="<?php echo $url;?>/css/default.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $url;?>/css/content/info.css" rel="stylesheet" type="text/css" />

@@ -12,7 +12,7 @@ __________________________________________________ */
 body	{
 	margin:0px;
 	padding:0px;
-	font:normal 14px 'Raleway', Tahoma, sans-serif;
+	font:normal 14px 'Open Sans', Tahoma, sans-serif;
 	color:#2d2d2d;
 	background:#fff;
 }
@@ -72,14 +72,14 @@ __________________________________________________ */
 #logoarea h2 {
 	width: 31.25%;
 	font-size: 14px;
-	line-height: 1.6;
+	line-height: 1.2;
 	text-align: center;
 }
 #logoarea h2 span {
 	position: relative;
 	display: inline-block;
-	padding: 0 15px;
-	font-size: 12px;
+	padding: 0 10px 0 14px;
+	font-size: 13px;
 	font-weight: normal;
 }
 #logoarea h2 span:before {
@@ -159,6 +159,7 @@ __________________________________________________ */
 	z-index:100;
 }
 #header #topmenu	{
+	display: table;
 	margin: 0 auto;
 	width:960px;
 	font-size:14px;
@@ -168,30 +169,34 @@ __________________________________________________ */
 	clear: both;
 	display: block;
 }
-#topmenu li	{
-	float:left;
-	text-align:center;
+#topmenu li {
 	list-style:none;
 }
-#topmenu li:nth-child(1) { width:80px; }
+#topmenu > li	{
+	position: relative;
+	display: table-cell;
+	padding: 0 15px;
+}
+/*#topmenu li:nth-child(1) { width:80px; }
 #topmenu li:nth-child(2) { width:100px; }
 #topmenu li:nth-child(3) { width:120px; }
 #topmenu li:nth-child(4) { width:150px; }
 #topmenu li:nth-child(5) { width:100px; }
 #topmenu li:nth-child(6) { width:140px; }
 #topmenu li:nth-child(7) { width:140px; }
-#topmenu li:nth-child(8) { width:130px; }
+#topmenu li:nth-child(8) { width:130px; }*/
 #topmenu a	{
 	display:block;
 	padding:17px 0px;
 	width:100%;
 	text-decoration:none;
+	text-transform: lowercase;
 }
 #topmenu li:hover a,
 #topmenu .mnselect	{
 	color:#471f0a;
 	background:#fff;
-	text-shadow: 0px 0px 3px #bfbfbf;
+	/*text-shadow: 0px 0px 3px #bfbfbf;*/
 	z-index:11;
 }
 
@@ -203,12 +208,17 @@ __________________________________________________ */
 /* Topmenu - Sub Menu */
 #topmenu .submenu	{
 	position:absolute;
+	top: -webkit-calc(100% - 17px);
+	top: calc(100% - 17px);
+	left: 0;
 	padding-top:3px;
+	padding-bottom: 5px;
 	width:auto;
 	min-width:180px;
-	-webkit-box-shadow: 2px 2px 2px -2px #bbb;
+	background-color: #fff;
+	/*-webkit-box-shadow: 2px 2px 2px -2px #bbb;
 	-moz-box-shadow: 2px 2px 2px -2px #bbb;
-	box-shadow: 2px 2px 2px -2px #bbb;
+	box-shadow: 2px 2px 2px -2px #bbb;*/
 	visibility: hidden;
 	z-index:10;
 }
@@ -218,16 +228,19 @@ __________________________________________________ */
 	text-align:left !important;
 }
 #topmenu .submenu li:hover a	{
-	background:#e2d9d2 !important;
+	/*background:#e2d9d2 !important;*/
 }
 #topmenu .submenu a	{
-	padding:8px 15px 8px 15px !important;
+	padding:1px 15px !important;
 	width:auto !important;
+	font-size: 13px;
+	text-transform: lowercase;
 	text-shadow:none !important;
 	color:#494949 !important;
 }
 #topmenu .submenu a:hover	{
-	color:#6b5543 !important;
+	/*color:#6b5543 !important;*/
+	font-weight: 700;
 }
 
 /* Banner */
@@ -351,6 +364,7 @@ __________________________________________________ */
 	display: inline-block;
 	padding:0px 35px;
 	text-align:center;
+	text-transform: lowercase;
 }
 #footermenu a	{
 	color:#fff;
@@ -373,6 +387,7 @@ __________________________________________________ */
 	padding:0px 14px 0px 14px;
 	text-align:center;
 	border-right:1px solid #b49c89;
+	text-transform: lowercase;
 }
 #bottommenu li:last-child	{
 	border:none;

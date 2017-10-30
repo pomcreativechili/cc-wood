@@ -19,7 +19,7 @@
 			echo '<h2>'.$ptopic.'</h2>';
 			if ($pdetail != "") echo '<div id="infodetail">'.$pdetail.'</div>';
 		}	else if ($spg != "" or $ptype == "1")	{
-			echo '<h2>'.$ptopic.' | '.$sptopic.'</h2>';
+			//echo '<h2>'.$ptopic.' | '.$sptopic.'</h2>';
 			if ($spdetail != "") echo '<div id="infodetail">'.$spdetail.'</div>';
 		}	else	{
 			if ($pdetail != "") echo '<div id="infodetail">'.$pdetail.'</div>';

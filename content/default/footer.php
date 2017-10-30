@@ -24,8 +24,8 @@
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['3000']['url'];?>"<?php if ($pid == "3000") echo ' class="mnselect"';?>>Building Services</a></li>
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['4000']['url'];?>"<?php if ($pid == "4000") echo ' class="mnselect"';?>>Our Work</a></li>
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'];?>"<?php if ($pid == "5000") echo ' class="mnselect"';?>>Quality &amp; Care</a></li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['8000']['url'];?>"<?php if ($pid == "8000") echo ' class="mnselect"';?>>News &amp; Recognition</a></li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['7000']['url'];?>"<?php if ($pid == "7000") echo ' class="mnselect"';?>>International</a></li>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['6000']['url'];?>"<?php if ($pid == "6000") echo ' class="mnselect"';?>>Work with Us</a></li>
+            <!-- <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['7000']['url'];?>"<?php if ($pid == "7000") echo ' class="mnselect"';?>>International</a></li> -->
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['10000']['url'];?>"<?php if ($pid == "10000") echo ' class="mnselect"';?>>Contact</a></li>
         </ul>
         <div class="clearline"></div>

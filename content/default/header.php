@@ -10,14 +10,14 @@
             <h2>
                 <div class="motto">the architectural woodworking company</div>
                 <div class="tagline">
-                    <span>product</span>
+                    <span>products</span>
                     <span>design</span>
                     <span>carpentry</span>
                 </div>
             </h2>
             <ul id="language">
-                <li><a href="<?php echo $url.'/en';?>" class="mnen<?php if ($sess_lg == "_en") echo " mnlgselect";?>">Eng</a></li>
-                <li><a href="<?php echo $url.'/th';?>" class="mnth<?php if ($sess_lg == "_th") echo " mnlgselect";?>">Tha</a></li>
+                <li><a href="<?php echo $url.'/en';?>" class="mnen<?php if ($sess_lg == "_en") echo " mnlgselect";?>">En</a></li>
+                <li><a href="<?php echo $url.'/th';?>" class="mnth<?php if ($sess_lg == "_th") echo " mnlgselect";?>">Th</a></li>
             </ul>
         </div>
 	</div>
@@ -73,7 +73,7 @@
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['6000']['url'].'/'.$mntxt['6005']['url'];?>"><?php echo $mntxt['6005']['text'];?></a></li>
                 </ul>
             </li>
-            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['7000']['url'];?>"<?php if ($pid == "7000") echo ' class="mnselect"';?>>International</a></li>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['10000']['url'];?>"<?php if ($pid == "10000") echo ' class="mnselect"';?>>Contact</a></li>
         </ul>
 	</div>
     <ul id="social">

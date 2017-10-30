@@ -25,7 +25,7 @@ __________________________________________________ */
 #info #infomenu	{
 	float: left;
 	width:180px;
-	padding: 46px 20px 0 0;
+	padding: 0 20px 0 0;
 }
 #info #infoload, #info #infomenu + #infoarea,  #infoarea + #listacc {
 	float: right;
@@ -41,12 +41,14 @@ __________________________________________________ */
 }
 #infomenu ul li	{
 	/*float:left;*/
-	padding: 5px 0;
+	padding: 0;
 }
 #infomenu ul li a	{
 	display:block;
-	padding:2px 0 2px 13px;
+	padding:1px 0 1px 13px;
 	border-left: 2px solid transparent;
+	text-transform: lowercase;
+	font-size: 13px;
 }
 #infomenu a:hover,
 #infomenu .mnspselect	{
@@ -57,13 +59,20 @@ __________________________________________________ */
 	border-left-color: #000;
 }
 
+#infomenu ul ul	{
+	margin-bottom: 7px;
+}
+
 #infomenu ul ul li {
 	padding-left: 15px;
 	padding-right: 0;
+	font-size: 13px;
 }
 
 #infomenu ul ul li a {
 	border: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 	text-transform: lowercase;
 }
 
@@ -110,6 +119,7 @@ __________________________________________________ */
 }
 #info #infoload #infoarea, #info #infoload #listacc	{
 	width: 100%;
+	padding: 0;
 }
 #info .nogallery	{
 	/*float:none !important;
@@ -121,6 +131,8 @@ __________________________________________________ */
 #infoarea h2	{
 	width:auto !important;
 	line-height: 24px;
+	text-transform: lowercase;
+	font-weight: 400;
 }
 #infoarea h2 span	{
 	color:#989482;
@@ -149,7 +161,6 @@ __________________________________________________ */
 	padding-bottom:20px;
 	margin-left:20px;
 	list-style:square;
-	font-size:12px;
 }
 #infodetail li	{
 	padding-left:10px;
