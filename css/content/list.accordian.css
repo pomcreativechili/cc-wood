@@ -16,35 +16,31 @@ __________________________________________________ */
 #listacc .mnlsselect	{
 	color:#6b8807 !important;
 }
+#listacc .listtopic h3	{
+	display: none;
+}
 #listacc .listbox	{
-	padding-top:45px;
-	padding-bottom:45px;
 	width:100%;
-	height:420px;
-	border-bottom:1px solid #bdb3a9;
 }
 
 /* Thumbnail */
 #listacc .listbox .listboxpic	{
-	float:left;
-	padding-right:60px;
-	width:420px;
+	width:100%;
+	margin-bottom: 2em;
 }
 #listacc .listbox .listboxpic img	{
-	width:420px;
-	height:420px;
+	width:100%;
+	height:auto;
 	background:url(../../images/loading/large.gif) no-repeat #b49c89 center;
 }
 
 /* Detail */
 #listacc .listbox .listboxdetail	{
-	float:left;
-	padding-right:10px;
-	width:350px;
-	height:420px;
+	display: block;
+	height: auto;
+	padding-right:0;
 	font-size:12px;
 	line-height:22px;
-	text-align:justify;
 	overflow:auto;
 }
 #listacc .listbox .listboxdetail h3	{

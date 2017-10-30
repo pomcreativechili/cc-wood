@@ -39,11 +39,11 @@ __________________________________________________ */
 	font-size:14px;
 	list-style:none;
 }
-#infomenu > ul > li	{
+#infomenu ul li	{
 	/*float:left;*/
 	padding: 5px 0;
 }
-#infomenu > ul > li > a	{
+#infomenu ul li a	{
 	display:block;
 	padding:2px 0 2px 13px;
 	border-left: 2px solid transparent;
@@ -55,6 +55,16 @@ __________________________________________________ */
 
 #infomenu .mnspselect	{
 	border-left-color: #000;
+}
+
+#infomenu ul ul li {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+#infomenu ul ul li a {
+	border: 0;
+	text-transform: lowercase;
 }
 
 /* Menu - Border color */

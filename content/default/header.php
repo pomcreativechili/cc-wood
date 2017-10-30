@@ -60,6 +60,8 @@
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5001']['url'];?>"><?php echo $mntxt['5001']['text'];?></a></li>
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5002']['url'];?>"><?php echo $mntxt['5002']['text'];?></a></li>
                     <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5003']['url'];?>"><?php echo $mntxt['5003']['text'];?></a></li>
+                    <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5004']['url'];?>"><?php echo $mntxt['5004']['text'];?></a></li>
+                    <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['5000']['url'].'/'.$mntxt['5005']['url'];?>"><?php echo $mntxt['5005']['text'];?></a></li>
                 </ul>
             </li>
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['6000']['url'];?>"<?php if ($pid == "6000") echo ' class="mnselect"';?>>Work with Us</a>

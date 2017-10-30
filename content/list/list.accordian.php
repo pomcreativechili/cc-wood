@@ -19,7 +19,7 @@
 			$lsdetail = str_replace("&rsquo;","'","$lsdetail");
 
 			echo '
-			<a href="#ls'.$ls[lid].'" name="ls'.$ls[lid].'" class="listtopic"><h3>'.$ls[$ltopic].'</h3></a>
+			<a id="ls'.$ls[lid].'" href="#ls'.$ls[lid].'" name="ls'.$ls[lid].'" class="listtopic"><h3>'.$ls[$ltopic].'</h3></a>
 			<div class="listbox">
 				<p class="listboxpic"><img src="'.$lpath.'/'.$ls[lpic].'" alt="'.$ls[$ltopic].'" /></p>
 				<div class="listboxdetail flexcroll">'.$lsdetail;

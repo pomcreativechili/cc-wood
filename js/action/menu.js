@@ -8,7 +8,11 @@ $(document).ready(function()	{
 		var toRel = $(this).attr('rel');
 		if (toRel != "listacc")	{
 			if(hash == href.substr(0,href.length)){
-				$("#infomenu a").removeClass("mnspselect");
+				if ($(this).hasClass('listtopic')) {
+					$("#infomenu a.listtopic").removeClass("mnspselect");
+				} else {
+					$("#infomenu a").removeClass("mnspselect");
+				}
 				$(this).addClass("mnspselect");
 				var toLoad = hash+' #infoload';
 				$('#infoload').load(toLoad,'',
@@ -92,7 +96,11 @@ $(document).ready(function()	{
 	
 	// Selected menu for sub pages
 	$("#infomenu a").click(function(){
-		$("#infomenu a").removeClass("mnspselect");
+		if ($(this).hasClass('listtopic')) {
+			$("#infomenu a.listtopic").removeClass("mnspselect");
+		} else {
+			$("#infomenu a").removeClass("mnspselect");
+		}
 		$(this).addClass("mnspselect");
 	});
 });

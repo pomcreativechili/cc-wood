@@ -50,7 +50,6 @@
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo $url;?>/css/script/flexcroll.css" />
-<script type="text/javascript" src="<?php echo $url;?>/js/flexcroll.js"></script>
 <script type="text/javascript">
 function updateScroll(){ fleXenv.updateScrollBars(); }
 </script>
