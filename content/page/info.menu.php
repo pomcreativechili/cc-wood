@@ -18,10 +18,11 @@
 			// }
 
 			// List menu
-            echo '<li><a href="'.$url.$lgurl.'/'.$p[purl].'/'.$mnsp[purl].'"'; 
-			if ($mnsp[plist] == "1") echo ' class="'; else echo ' class="mnnormal ';
-			if ($mnsp[pid] == $spid) echo 'mnspselect tp'.$pid.'"'; else echo 'tp'.$pid.'"';
-			echo '">'.$mnsp[$mnspmenu].'</a>';
+			if ($mnsp[plist] == "1") $plist_class = ''; else $plist_class = '';
+            echo '<li>';
+            if ($mnsp[pid] == $spid) echo '<h1 class="mnspselect tp'.$pid.$plist_class.'">'; else  echo '<a href="'.$url.$lgurl.'/'.$p[purl].'/'.$mnsp[purl].'" class="tp'.$pid.$plist_class.'">';
+			echo $mnsp[$mnspmenu];
+			if ($mnsp[pid] == $spid) echo '</h1>'; else echo '</a>';
 
 			$sublist = array();
 			if ($mnsp[plist] != "0" and $spid == $mnsp[pid]) {

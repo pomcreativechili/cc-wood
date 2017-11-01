@@ -24,12 +24,12 @@ __________________________________________________ */
 /* Menu */
 #info #infomenu	{
 	float: left;
-	width:180px;
+	width:190px;
 	padding: 0 20px 0 0;
 }
 #info #infoload, #info #infomenu + #infoarea,  #infoarea + #listacc {
 	float: right;
-	width: 710px;
+	width: 700px;
 	padding: 0 10px;
 }
 #info .nomargin	{
@@ -43,7 +43,7 @@ __________________________________________________ */
 	/*float:left;*/
 	padding: 0;
 }
-#infomenu ul li a	{
+#infomenu ul li a, #infomenu ul li h1	{
 	display:block;
 	padding:1px 0 1px 13px;
 	border-left: 2px solid transparent;
