@@ -34,8 +34,8 @@
 	$thumb_image_name = $thumb_image_prefix.$_SESSION['random_key'];     // New name of the thumbnail image (append the timestamp to the filename)
 	$max_file = "1"; 							// Maximum file size in MB
 	$max_width = "600";							// Max width allowed for the large image
-	$thumb_width = "124";						// Width of thumbnail image
-	$thumb_height = "124";						// Height of thumbnail image
+	$thumb_width = "600";						// Width of thumbnail image
+	$thumb_height = "200";						// Height of thumbnail image
 	// Only one of these image types should be allowed for upload
 	$allowed_image_types = array('image/pjpeg'=>"jpg",'image/jpeg'=>"jpg",'image/jpg'=>"jpg",'image/png'=>"png",'image/x-png'=>"png",'image/gif'=>"gif");
 	$allowed_image_ext = array_unique($allowed_image_types); // do not change this
@@ -416,7 +416,7 @@
 				<tr>
 					<td>&nbsp;</td>
 					<td class="tip">
-					^ 600 Pixels for maximum of width size (124 x 124 Pixels for Thumbnail size)<br />
+					^ 600 x 200 Pixels for picture size<br />
 					^ 1 MB for file size and .JPG, .PNG, GIF for file type
 					</td>
 				</tr>

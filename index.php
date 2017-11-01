@@ -49,19 +49,17 @@
 	echo $mobilecss;
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $url;?>/css/script/flexcroll.css" />
-<script type="text/javascript">
-function updateScroll(){ fleXenv.updateScrollBars(); }
-</script>
-
-<script type="text/javascript" src="<?php echo $url;?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $url;?>/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="<?php echo $url;?>/js/action/topmenu.js"></script>
 <script type="text/javascript" src="<?php echo $url;?>/js/smoothscroll.js"></script>
 <script type="text/javascript" src="<?php echo $url;?>/js/slides.min.jquery.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $url;?>/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
-<script type="text/javascript" src="<?php echo $url;?>/js/fancybox/jquery.easing-1.3.pack.js"></script>
-<script type="text/javascript" src="<?php echo $url;?>/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $url;?>/js/fancybox/jquery.fancybox.min.css" media="screen" />
+<script type="text/javascript" src="<?php echo $url;?>/js/fancybox/jquery.fancybox.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $url;?>/owlcarousel/assets/owl.carousel.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $url;?>/owlcarousel/assets/owl.theme.default.min.css" media="screen" />
+<script type="text/javascript" src="<?php echo $url;?>/owlcarousel/owl.carousel.min.js"></script>
 
 <script type="text/javascript" src="<?php echo $url;?>/js/action/default.js"></script>
 <?php 

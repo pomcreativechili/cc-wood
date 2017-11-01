@@ -10,60 +10,47 @@
 	$totalhl = mysql_num_rows($resulthl);
 	
 	$hlamount = $totalhl + 3;
-	$hlwidth = ($hlamount * 158) + 261 + 316;
+	//$hlwidth = ($hlamount * 158) + 261 + 316;
+	$hlwidth = $totalhl * 100;
 	
 	if ($totalhl > 0)	{
 		echo '
 		<div id="highlight">
-		<span class="hlprev hl0"></span>
-		<span class="hlnext hl2"></span>
 		<div id="highlightarea">
-		<div id="highlightboxarea" style="width:'.$hlwidth.'px;">
+		<div id="highlightboxarea" class="owl-carousel owl-theme">
 		';
-		$hlnum = 1;
 		while ($hl = mysql_fetch_array($resulthl))	{
-			if ($hl[$hurl] != "") $hlpic = '<a href="'.$hl[$hurl].'"><img src="'.$hpath.'/'.$hl[hpic].'" alt="'.$hl[$htitle].'"/></a>';
-			else $hlpic = '<img src="'.$hpath.'/'.$hl[hpic].'" alt="'.$hl[$htitle].'"/>';
-			
+			if ($hl[$hurl] != "") echo '<a class="highlightbox item" href="'.$hl[$hurl].'">'; else echo '<div class="highlightbox item">';
 			echo '
-			<div class="highlightbox hlb'.$hlnum.'">
-				<p class="highlightboxpic"><span class="hlcover hlth'.$hlnum.'"></span>'.$hlpic.'</p>
-				<div class="highlightboxinfo"><h3>'.$hl[$htitle].'</h3><p>'.$hl[$hdetail].'</p></div>
+				<div class="highlightboxpic"><img src="'.$hpath.'/'.$hl[hpic].'" alt="'.$hl[$htitle].'"/></div>
+				<div class="highlightboxinfo"><div><h3>'.$hl[$htitle].'</h3><p>'.$hl[$hdetail].'</p></div></div>
 				<div class="clearline"></div>
-			</div>
 			';
-			$hlnum++;
+			if ($hl[$hurl] != "") echo '</a>'; else echo '</div>';
 		}
 		
-		echo '
-		<div class="highlightbox hlcbox"><span class="hlclear hlc1"></span></div>
-		<div class="highlightbox hlcbox"><span class="hlclear hlc2"></span></div>
-		<div class="highlightbox hlcbox"><span class="hlclear hlc3"></span></div>
-		<span class="hlamount hlm'.$totalhl.'"></span>
-		<div class="clearline"></div>
-		</div>
-		';
+		echo '</div></div></div>';
 		
 		// Highlight bullets
-		$sqlhlb = "select * from tb_home WHERE htype='0' AND hactive='1' order by abs(hsort)";
-		$resulthlb = mysql_query($sqlhlb, $dgz) or die(mysql_error());
-		$totalhlb = mysql_num_rows($resulthlb);
-		if ($totalhlb > 0)	{
-			$hlbwidth = $totalhlb * 13;
-			$hlbmargin = 840 - $hlbwidth;
-			$hlbnum = 1;
-			echo '<div id="highlightbullet" style="width:'.$hlbwidth.'px; margin-left:'.$hlbmargin.'px;">';
-			while ($hlb = mysql_fetch_array($resulthlb))	{
-				echo '<span class="hlcover hlth'.$hlbnum.'"></span>';
-				$hlbnum++;
-			}
-			echo '</div>';
-		}
+		// $sqlhlb = "select * from tb_home WHERE htype='0' AND hactive='1' order by abs(hsort)";
+		// $resulthlb = mysql_query($sqlhlb, $dgz) or die(mysql_error());
+		// $totalhlb = mysql_num_rows($resulthlb);
+		// if ($totalhlb > 0)	{
+		// 	$hlbwidth = $totalhlb * 13;
+		// 	$hlbmargin = 840 - $hlbwidth;
+		// 	$hlbnum = 1;
+		// 	echo '<div id="highlightbullet" style="width:'.$hlbwidth.'px; margin-left:'.$hlbmargin.'px;">';
+		// 	while ($hlb = mysql_fetch_array($resulthlb))	{
+		// 		echo '<span class="hlcover hlth'.$hlbnum.'"></span>';
+		// 		$hlbnum++;
+		// 	}
+		// 	echo '</div>';
+		// }
 			
-		echo '
-		</div>
-		</div>
-		';
+		// echo '
+		// </div>
+		// </div>
+		// ';
 	}
 	
 	// Information + Gallery

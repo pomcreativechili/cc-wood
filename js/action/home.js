@@ -2,11 +2,20 @@
 __________________________________________________ */
 
 $(document).ready(function()	{
-	$("#highlight").slides({
-		slideSpeed: 600,
-		generatePagination: false,
-		generateNextPrev: true,
-		autoHeight: true
+	// $("#highlight").slides({
+	// 	slideSpeed: 600,
+	// 	generatePagination: false,
+	// 	generateNextPrev: true,
+	// 	autoHeight: true
+	// });
+
+	$('#highlightboxarea').owlCarousel({
+		items:1,
+	    loop:true,
+	    autoplay:true,
+	    margin:0,
+	    nav:true,
+	    dots:false,
 	});
 
 	$("#video").slides({
