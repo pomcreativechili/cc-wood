@@ -2,10 +2,13 @@
 __________________________________________________ */
 
 $(document).ready(function()	{
-	$("#productgallery, .srcbox").slides({
-		slideSpeed: 600,
-		generatePagination: false,
-		generateNextPrev: true
+	$('.productgallery').owlCarousel({
+		items:1,
+	    loop:true,
+	    autoplay:true,
+	    margin:0,
+	    nav:true,
+	    dots:true,
 	});
 
 	$('.productzoom').zoomy({ border:'3px solid #fff' });

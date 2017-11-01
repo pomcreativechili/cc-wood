@@ -34,8 +34,9 @@
 		$resultw = mysql_query($sqlw, $dgz) or die(mysql_error());
 		$w = mysql_fetch_array($resultw);
 	}	else if ($sess_gtype == "5")	{
-		$gmax = 700;
-		$gwidth = 50;
+		$gmax = 750;
+		$hmax = 500;
+		$gwidth = 75;
 		$gheight = 50;
 		$gpath = "../../resources/product/gallery";
 		$sqlpd = "select * from tb_product WHERE pid='$sess_pid' AND cid='$sess_gpage' AND pdid='$sess_pdid'";
@@ -494,7 +495,7 @@
 					<td>&nbsp;</td>
 					<td class="tip">
                     <?php
-						if ($sess_gtype == 5) echo '^ 700 x 700 Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
+						if ($sess_gtype == 5) echo '^'.$gmax.' x '.$hmax.' Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
 						else if ($sess_gtype != 4) echo '^ 900 Pixels for maximum of width size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
 						else echo '^ 700 x 465 Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
 					?>

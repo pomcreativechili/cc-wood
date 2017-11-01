@@ -160,7 +160,7 @@ function check()	{
 			<tr>
 				<td>&nbsp;</td>
 				<td class="tip">
-                ^ 700 x 700 Pixels for picture size (122 x 122 Pixels for Thumbnail size)<br />
+                ^ 750 x 500 Pixels for picture size
                 ^ 2 MB for file size and .JPG, .PNG, GIF for file type
 				</td>
 			</tr>

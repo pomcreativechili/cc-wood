@@ -85,35 +85,26 @@ $(document).ready(function()	{
 					// echo '</div>';
 ?>
 					<div id="product">
-						<!-- <p id="productpic"><a href="<?php echo $pdpath.'/'.str_replace('th','',$srp[pdpic]);?>" class="productzoom"><img src="<?php echo $pdpath.'/'.str_replace('th','',$srp[pdpic]);?>" alt="<?php echo $srp[$pdtitle];?>" /></a></p> -->
 						<?php while ($srp = mysql_fetch_array($resultsrp))	{
 							$sqlsrg = "select * from tb_gallery WHERE pdid='$srp[pdid]' AND pid='$spid' AND gtype='5' AND gpage='$src[cid]' order by abs(gsort)";
 							$resultsrg = mysql_query($sqlsrg, $dgz) or die(mysql_error());
 							$totalsrg = mysql_num_rows($resultsrg);
 						?>
 					    <div class="productinfo">
+					    	<div id="productgallery-<?php echo $srp[pdid]; ?>" class="productgallery slider-normal owl-carousel owl-theme">
 					    	<?php if ($totalsrg > 0) { ?>
-					        <div id="productgallery-<?php echo $srp[pdid]; ?>" class="productgallery">
-					            <span class="pdprev"></span>
-					            <span class="pdnext"></span>
-					            <?php if ($totalsrg > 5) { ?>
-					            <a href="#" class="prev"></a>
-					            <a href="#" class="next"></a>
-					            <?php } ?>
-					            <div class="slides_container">
-					            <?php 
-									$srgnum = 1;
-									$srgalt = "galt".$sess_lg;
-									while ($srg = mysql_fetch_array($resultsrg))	{
-										if ($srgnum == 1) echo '<p>';
-										echo '<img src="'.$pdpath.'/gallery/'.$srg[gthumb].'" alt="'.$srg[$srgalt].'" />';
-										if ($srgnum == 5) { echo '</p>'; $srgnum = 0; }
-										$srgnum++;
-									}
-								?>
-					            </div>
-					        </div>
+				            <?php 
+								$srgalt = "galt".$sess_lg;
+								while ($srg = mysql_fetch_array($resultsrg))	{
+							?>
+								<div class="item"><img src="<?php echo $pdpath.'/gallery/'.str_replace('th', '', $srg[gthumb]); ?>" alt="<?php echo $srg[$srgalt]; ?>" /></div>
+							<?php
+								}
+							?>
+					        <?php } else { ?>
+					        	<div class="item"><img src="<?php echo $pdpath.'/'.str_replace('th', '', $srp[pdpic]); ?>" alt="<?php echo $srp[$pdtitle]; ?>" /></div>
 					        <?php } ?>
+					    	</div>
 					    	<div class="productdetail">
 					        <?php 
 								echo '<h2>'.$srp[$pdtitle].'</h2>';

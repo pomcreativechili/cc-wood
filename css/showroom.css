@@ -6,7 +6,7 @@ __________________________________________________ */
 __________________________________________________ */
 
 #info #listshowroom	{
-	padding:0px 10px 0px 10px;
+	padding:0px;
 	width:100%;
 }
 #listshowroom h3	{
@@ -26,6 +26,10 @@ __________________________________________________ */
 }
 #listshowroom .srcbox	{
 	position:relative;
+}
+#listshowroom .srcbox .productdetail h2	{
+	margin-top: 25px;
+	font-weight: 400;
 }
 #listshowroom .srcbox .next, #listshowroom .srcbox .srpnext,
 #listshowroom .srcbox .prev, #listshowroom .srcbox .srpprev	{
@@ -97,7 +101,7 @@ __________________________________________________ */
 __________________________________________________ */
 
 #info #product	{
-	padding:30px 10px 50px 10px;
+	padding:0;
 	width:100%;
 }
 
