@@ -87,3 +87,18 @@ __________________________________________________ */
 	line-height:14px;
 	color:#6b5543;
 }
+
+/* Project */
+.projectinfo {
+	margin-bottom: 3em;
+}
+
+.projectdetail {
+	margin-top: 2em;
+}
+
+.projectdetail h2 {
+	font-weight: 400;
+	margin-bottom: 0;
+	padding-bottom: 0 !important;
+}

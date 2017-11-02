@@ -39,7 +39,7 @@
 		else if ($splist == "3") 					include("content/list/list.news.php");
 		else if ($plist == "2" or $splist == "2") 	include("content/list/list.info.php");
 		else if ($splist == "S") 					include("content/showroom/list.php");
-		else if ($plist == "W") 					include("content/work/list.php");
+		else if ($plist == "W") 					include("content/showroom/list.php");
 		
 		// Sub pages
 		if ($spid == "5001") include("content/list/list.sub.php");

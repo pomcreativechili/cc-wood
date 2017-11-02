@@ -54,6 +54,17 @@
 					$ltopic = "ctitle".$sess_lg;
 					//$pdtitle = "pdtitle".$sess_lg;
 					$lpath = $url."/admin/resources/product";
+				} else if ($splist == "W") {
+					// Work
+					$sqlls = "SELECT * FROM tb_work WHERE pid='{$mnsp[pid]}' AND wactive='1' ORDER BY wsort";
+					$resultls = mysql_query($sqlls, $dgz) or die(mysql_error());
+					$totalls = mysql_num_rows($resultls);
+					
+					$lprefix = "sr";
+					$lid = "wid";
+					$ltopic = "wtitle".$sess_lg;
+					//$pdtitle = "pdtitle".$sess_lg;
+					$lpath = $url."/admin/resources/work";
 				}
 				
 				if ($totalls > 0)	{

@@ -1,3 +1,4 @@
+<?php if ($splist == "S") { ?>
 <script type="text/javascript">
 $(document).ready(function()	{
 	<?php if ($sbpg == "") { ?>
@@ -20,7 +21,6 @@ $(document).ready(function()	{
 	});
 });
 </script>
-
 <?php
 	// Showroom
 	$sqlsrc = "select tb_category.*, ";
@@ -123,3 +123,79 @@ $(document).ready(function()	{
 		echo '</div>';
 	}
 ?>
+<?php } else { ?>
+<?php
+	// Work
+	$sqlsrc = "SELECT * FROM tb_work WHERE pid='$spid' AND wactive='1' ORDER BY wsort";
+	$resultsrc = mysql_query($sqlsrc, $dgz) or die(mysql_error());
+	$totalsrc = mysql_num_rows($resultsrc);
+	
+	$wid = "wid";
+	$pdtitle = "wtitle".$sess_lg;
+	$pddetail = "wdetail".$sess_lg;
+	$pdpath = $url."/admin/resources/work";
+
+	$wtitle = "wtitle".$sess_lg;
+	$wtopic1 = "wtopic1".$sess_lg;
+	$wtext1 = "wtext1".$sess_lg;
+	$wtopic2 = "wtopic2".$sess_lg;
+	$wtext2 = "wtext2".$sess_lg;
+	$wtopic3 = "wtopic3".$sess_lg;
+	$wtext3 = "wtext3".$sess_lg;
+	$wtopic4 = "wtopic4".$sess_lg;
+	$wtext4 = "wtext4".$sess_lg;
+	
+	if ($totalsrc > 0)	{
+		echo '<div id="listproject"><div id="project">';
+		while ($src = mysql_fetch_array($resultsrc))	{
+?>
+				<div class="projectinfo">
+			    	<div id="projectgallery-<?php echo $src[$wid]; ?>" class="projectgallery slider-normal owl-carousel owl-theme">
+<?php
+			$sqlsrg = "select * from tb_gallery WHERE pid='{$src[$wid]}' AND gtype='4' AND gpage='4000' order by abs(gsort)";
+			$resultsrg = mysql_query($sqlsrg, $dgz) or die(mysql_error());
+			$totalsrg = mysql_num_rows($resultsrg);
+			
+			if ($totalsrg > 0) {
+				$srgalt = "galt".$sess_lg;
+				while ($srg = mysql_fetch_array($resultsrg))	{
+?>
+						<div class="item"><img src="<?php echo $pdpath.'/gallery/'.str_replace('th', '', $srg[gthumb]); ?>" alt="<?php echo $srg[$srgalt]; ?>" /></div>
+<?php
+				}
+?>
+<?php
+			} else {
+?>
+					    <div class="item"><img src="<?php echo $pdpath.'/'.str_replace('th', '', $src[pdpic]); ?>" alt="<?php echo $src[$pdtitle]; ?>" /></div>
+<?php 
+			}
+?>
+					</div>
+					<div class="projectdetail">
+				        <?php 
+							echo '<h2>'.$src[$pdtitle].'</h2>';
+							if ($src[$wtext1] != "") echo '<span class="wtext">'.$src[$wtext1].'</span><br />';
+							if ($src[$wtext2] != "") echo '<span class="wtext">'.$src[$wtext2].'</span><br />';
+							if ($src[$pddetail] != "") echo '<p>'.$src[$pddetail].'</p>';
+						?>
+				    	</div>
+				    </div>
+<?php
+		}
+		echo '</div></div>';
+	}
+?>
+<script type="text/javascript">
+$(document).ready(function()	{
+	$('.projectgallery').owlCarousel({
+		items:1,
+	    loop:true,
+	    autoplay:true,
+	    margin:0,
+	    nav:true,
+	    dots:true,
+	});
+});
+</script>
+<?php } ?>
