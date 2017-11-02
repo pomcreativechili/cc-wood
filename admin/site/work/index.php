@@ -19,6 +19,11 @@
 	// Page Content
 	include("../../config/page.info.php");
 
+	// Category
+	$sqlmnsp = "SELECT pid, ptopic_en FROM tb_page WHERE pmp LIKE '4000' ORDER BY pid";
+    $resultmnsp = mysql_query($sqlmnsp, $dgz) or die(mysql_error());
+    while ($mnsp = mysql_fetch_array($resultmnsp)) $wcate[$mnsp[pid]] = $mnsp[ptopic_en];
+    
 	// Work Information
 	$sqlw = "select * from tb_work";
 	$resultw = mysql_query($sqlw, $dgz) or die(mysql_error());
@@ -61,10 +66,11 @@
                 </th>
          	</tr>
 			<tr>
-				<th style="background-color:#d7d7d7; width:60px;">&nbsp;</th>
+				<th style="background-color:#d7d7d7; width:50px;">&nbsp;</th>
 				<th style="background-color:#d7d7d7; width:80px;">#</th>
-				<th style="background-color:#d7d7d7; width:140px;">Posted</th>
+				<th style="background-color:#d7d7d7; width:120px;">Posted</th>
 				<th style="background-color:#d7d7d7; text-align:left;">Title</th>
+				<th style="background-color:#d7d7d7; width:120px;">Category</th>
 				<th style="background-color:#d7d7d7; width:60px;">Picture</th>
 				<th style="background-color:#d7d7d7; width:60px;">Active</th>
 				<th style="background-color:#d7d7d7; width:60px;">Order</th>
@@ -72,12 +78,14 @@
 			<?php
 				$count = $totalw;
 				while ($rec = mysql_fetch_array($result))	{
+					$cate = $wcate[$rec[pid]];
 					echo "
 					<tr class='trc'>
 						<td style='text-align:center'><input name='num$count' type='text' class='boxsort' value='$rec[wsort]' onclick='this.select();'/><input name='id$count' type='hidden' value='$rec[wid]' /></td>
 						<td style='text-align:center'>$rec[wid]</td>
 						<td style='text-align:center'>$rec[wposted]</td>
 						<td><a href='update.php?wid=$rec[wid]'>$rec[wtitle_en]</a></td>
+						<td style='text-align:center'><a href='../content/update.php?pid=$rec[pid]'>$cate</a></td>
 						<td style='text-align:center'>"; if ($rec[wpic] == "") echo "No"; else echo "<a href='$wpath/$rec[wpic]' class='largepic'><img src='../../images/tools/pic.png' alt='' /></a>"; echo "</td>
 						<td style='text-align:center'>";
 						if ($rec[wactive] == "0") echo "<a href='conn/status.php?wid=$rec[wid]&amp;status=1'><img src='../../images/tools/red.png' alt=''/></a> ";

@@ -112,8 +112,8 @@
 			$pwidth = 265;
 			$pheight = 200;
 		}	else	{
-			$pwidth = 1680;
-			$pheight = 385;
+			$pwidth = 1920;
+			$pheight = 420;
 		}
 	}
 

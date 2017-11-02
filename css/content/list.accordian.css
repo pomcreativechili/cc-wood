@@ -26,7 +26,6 @@ __________________________________________________ */
 /* Thumbnail */
 #listacc .listbox .listboxpic	{
 	width:100%;
-	margin-bottom: 2em;
 }
 #listacc .listbox .listboxpic img	{
 	width:100%;
@@ -38,6 +37,7 @@ __________________________________________________ */
 #listacc .listbox .listboxdetail	{
 	display: block;
 	height: auto;
+	margin-top: 2em;
 	padding-right:0;
 	font-size:12px;
 	line-height:22px;

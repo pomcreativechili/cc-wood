@@ -13,6 +13,8 @@
 		$wurl = str_replace(" ","_","$wurl");
 		$wurl = strtolower($wurl);
 
+		$wpid = $_POST['wpid'];
+
 		// English
 		$wtitle_en = $_POST['wtitle_en'];
 		$wtitle_en = str_replace('"',"&quot;","$wtitle_en");
@@ -49,7 +51,7 @@
 		$wdetail_th = str_replace('"',"&quot;","$wdetail_th");
 		$wdetail_th = str_replace("'","&rsquo;","$wdetail_th");
 
-		$sql = "UPDATE tb_work SET wurl='$wurl', wtitle_en='$wtitle_en', wtitle_th='$wtitle_th', wtopic1_en='$wtopic1_en', wtopic1_th='$wtopic1_th', wtext1_en='$wtext1_en', wtext1_th='$wtext1_th', wtopic2_en='$wtopic2_en', wtopic2_th='$wtopic2_th', wtext2_en='$wtext2_en', wtext2_th='$wtext2_th', wtopic3_en='$wtopic3_en', wtopic3_th='$wtopic3_th', wtext3_en='$wtext3_en', wtext3_th='$wtext3_th', wtopic4_en='$wtopic4_en', wtopic4_th='$wtopic4_th', wtext4_en='$wtext4_en', wtext4_th='$wtext4_th', wdetail_en='$wdetail_en', wdetail_th='$wdetail_th' WHERE wid='$wid'";
+		$sql = "UPDATE tb_work SET wurl='$wurl', pid='$wpid', wtitle_en='$wtitle_en', wtitle_th='$wtitle_th', wtopic1_en='$wtopic1_en', wtopic1_th='$wtopic1_th', wtext1_en='$wtext1_en', wtext1_th='$wtext1_th', wtopic2_en='$wtopic2_en', wtopic2_th='$wtopic2_th', wtext2_en='$wtext2_en', wtext2_th='$wtext2_th', wtopic3_en='$wtopic3_en', wtopic3_th='$wtopic3_th', wtext3_en='$wtext3_en', wtext3_th='$wtext3_th', wtopic4_en='$wtopic4_en', wtopic4_th='$wtopic4_th', wtext4_en='$wtext4_en', wtext4_th='$wtext4_th', wdetail_en='$wdetail_en', wdetail_th='$wdetail_th' WHERE wid='$wid'";
 		$result = mysql_query($sql,$dgz);
 		if ($result) { print "<meta http-equiv=\"refresh\"content=\"0; URL=update.php?wid=$wid&err=2\">"; exit(); }
 		else { print "<meta http-equiv=\"refresh\"content=\"0; URL=update.php?wid=$wid&err=1\">"; exit(); }
@@ -65,6 +67,7 @@
 	$rec = mysql_fetch_array($result);
 	
 	$wurl 		= $rec[wurl];
+	$wpid 		= $rec[pid];
 	$wtitle_en	= $rec[wtitle_en];
 	$wtopic1_en	= $rec[wtopic1_en];
 	$wtext1_en	= $rec[wtext1_en];
@@ -143,6 +146,22 @@ function check()	{
 				<td style="padding-top:25px; width:740px;">
 				<?php echo $url."/".$p[purl]."/";?>
                 <input name="wurl" type="text" class="box" value="<?php echo $wurl;?>" size="" style="width:300px;" />
+                </td>
+			</tr>
+			<tr>
+				<td style="padding-top:25px; width:160px;">Category :</td>
+				<td style="padding-top:25px; width:740px;">
+	                <select name="wpid" class="box">
+	                <?php
+	                	$sqlmnsp = "SELECT pid, ptopic_en FROM tb_page WHERE pmp LIKE '4000' ORDER BY pid";
+				        $resultmnsp = mysql_query($sqlmnsp, $dgz) or die(mysql_error());
+					
+				        while ($mnsp = mysql_fetch_array($resultmnsp))	{
+				        	if ( $mnsp[pid] == $wpid ) $select = ' selected="selected"'; else $select = '';
+				        	echo '<option value="'.$mnsp[pid].'"'.$select.'>'.$mnsp[ptopic_en].'</option>';
+				        }
+	                ?>
+	                </select>
                 </td>
 			</tr>
         	<tr><td class="contenttitle" colspan="2"><img src="../../images/tools/en.jpg" alt="" /> ENGLISH</td></tr>

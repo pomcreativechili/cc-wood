@@ -22,4 +22,13 @@ $(document).ready(function(){
 		var elm = '#' + $(this).attr('name');
 		$(elm).trigger('click');
 	});
+
+	$('.listbox .owl-carousel').owlCarousel({
+		items:1,
+	    loop:true,
+	    autoplay:true,
+	    margin:0,
+	    nav:true,
+	    dots:true,
+	});
 });

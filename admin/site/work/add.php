@@ -18,6 +18,8 @@
 		$wurl = str_replace(" ","_","$wurl");
 		$wurl = strtolower($wurl);
 
+		$wpid = $_POST['wpid'];
+
 		$wtopic1_en = $_POST['wtopic1_en'];
 		$wtext1_en = $_POST['wtext1_en'];
 		$wtopic2_en = $_POST['wtopic2_en'];
@@ -457,6 +459,21 @@
 			<form name="photo" enctype="multipart/form-data" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" <?php if ($_SESSION['user_file_ext'] != "") { echo "style='display:none;'"; } ?> onsubmit="return check();">
             <h3><img src="../../images/tools/add.png" alt="" />&nbsp; Post new Work</h3>	
 			<table cellpadding="0" cellspacing="0" class="contentinfo">
+				<tr>
+					<td style="padding-top:25px; width:160px;">Category :</td>
+					<td style="padding-top:25px; width:740px;">
+		                <select name="wpid" class="box">
+		                <?php
+		                	$sqlmnsp = "SELECT pid, ptopic_en FROM tb_page WHERE pmp LIKE '4000' ORDER BY pid";
+					        $resultmnsp = mysql_query($sqlmnsp, $dgz) or die(mysql_error());
+						
+					        while ($mnsp = mysql_fetch_array($resultmnsp))	{
+					        	echo '<option value="'.$mnsp[pid].'">'.$mnsp[ptopic_en].'</option>';
+					        }
+		                ?>
+		                </select>
+	                </td>
+				</tr>
                 <tr><td class="contenttitle" colspan="2"><img src="../../images/tools/en.jpg" alt="" /> ENGLISH</td></tr>
                 <tr>
                     <td style="padding-top:25px; width:160px;">Project / Title :</td>
