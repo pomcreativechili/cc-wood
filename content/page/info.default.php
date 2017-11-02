@@ -1,4 +1,4 @@
-<div id="info"<?php if ($pid == "0000") echo ' class="infohome"';?>>
+<div id="info"<?php if ($pid == "0000") echo ' class="infohome"';?> <?php if ($pid == "10000") echo ' class="infocontact"';?>>
 <?php
 	// Menu sub pages
 	if ($ptype == "1") include("info.menu.php");

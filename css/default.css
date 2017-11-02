@@ -462,3 +462,57 @@ __________________________________________________ */
 .clearline	{
 	clear:both;
 }
+
+/* Contact */
+
+#info.infocontact #infoarea {
+	width: 100%;
+}
+
+#info.infocontact .infotopic, #info.infocontact #infogallery {
+	display: none;
+}
+
+#info.infocontact #infodetail, #info.infocontact #contact {
+	float: left;
+	display: block;
+	width: 450px;
+	margin-top: 0;
+	padding-top: 0;
+	border-top: 0;
+}
+
+#info.infocontact #infodetail {
+	padding-right: 15px;
+}
+
+#info.infocontact #infodetail h3, #info.infocontact #contact h3 {
+	padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+#info.infocontact #contact {
+	padding-left: 15px;
+}
+
+#info.infocontact #contact .box {
+	max-width: 100%;
+	background-color: #fff;
+	border-color: #303030;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: inherit;
+}
+
+#info.infocontact #contact .formbutton .btsend {
+	background-color: #303030;
+}
+
+#info.infocontact #contact .formbutton > input {
+	border-radius: 0;
+	text-transform: lowercase;
+	font-family: inherit;
+}

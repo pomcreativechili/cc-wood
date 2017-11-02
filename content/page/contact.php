@@ -59,8 +59,7 @@ function chkcontact()	{
     <p><input name="reason" type="text" class="box" value=""/></p>
     <p class="formtopic">Comments / Questions</p>
     <p><textarea name="comment" class="box" rows="8"></textarea></p>
-	<p class="formtopic">Spam Check</p>
-	<p><input name="ans" type="text" class="box boxans" value="" size="" /> &nbsp; <span class="formspam"><?php echo $chk1." + ".$chk2." = ?"; ?></span></p>
+	<p class="formtopic">Spam Check <span class="formspam"><?php echo $chk1." + ".$chk2." = ?"; ?></span> &nbsp; <input name="ans" type="text" class="box boxans" value="" size="" /></p>
     <p class="formbutton">
     <input type="submit" name="Submit1" value="Send" class="btsend" />
     <input type="reset" name="Submit2" value="Reset" class="btreset" />
@@ -70,3 +69,4 @@ function chkcontact()	{
 	</p>
     </form>
 </div>
+<div class="clearline"></div>
