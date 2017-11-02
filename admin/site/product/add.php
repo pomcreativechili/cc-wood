@@ -484,7 +484,7 @@
                 <tr>
                     <td>&nbsp;</td>
 					<td class="tip">
-					^ 750 x 500 Pixels for picture size
+					^ 750 x 500 Pixels for picture size <br />
 					^ 2 MB for file size and .JPG, .PNG, GIF for file type
 					</td>
                 </tr>

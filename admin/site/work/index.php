@@ -7,7 +7,7 @@
 	unset($_SESSION['sess_ltype']);
 	unset($_SESSION['sess_lid']);
 	
-	$pid = "4000";
+	$pid = "4000"; $spid = $_GET['pid'];
 	$pn = $_GET['pn']; if ($pn == "") $pn = 0;
 	
 	// Amount to display
@@ -26,11 +26,12 @@
     
 	// Work Information
 	$sqlw = "select * from tb_work";
+	if ($_GET['pid'] and $_GET['pid']!='4000' ) $sqlw .= " WHERE pid='".$_GET['pid']."'";
 	$resultw = mysql_query($sqlw, $dgz) or die(mysql_error());
 	$totalw = mysql_num_rows($resultw);
 	$apage = $totalw / $limit;
 
-	$sql = $sqlw." order by wsort LIMIT $start,$limit";
+	$sql = $sqlw." ORDER BY wsort LIMIT $start,$limit";
 	$result = mysql_query($sql, $dgz) or die(mysql_error());
 	$total = mysql_num_rows($result);
 ?>

@@ -1,6 +1,13 @@
 <?php if ($lid == "" and $wid == "" and $cid == "" and $pdid == "") { ?>
 <p class="contentmenu">
+	<?php
+		if ($p[plist] == "W") {
+			if (!isset($spid)) $spid = $p[pid];
+	?>
+	<a href="../content/update.php?pid=<?php echo $spid;?>"><?php if ($pg == "info") echo "<strong>Info</strong>"; else echo "Info";?></a> 
+	<?php } else { ?>
 	<a href="../content/update.php?pid=<?php echo $p[pid];?>"><?php if ($pg == "info") echo "<strong>Info</strong>"; else echo "Info";?></a> 
+	<?php } ?> 
     
 	<?php if ($p[pid] == "0000") { // Home ?>
 	&nbsp;.&nbsp; <a href="../slide/index.php"><?php if ($pg == "slide") echo "<strong>Slide</strong>"; else echo "Slide";?></a>
@@ -19,7 +26,7 @@
     <?php } ?>
 
 	<?php if ($p[plist] == "W") { // Our Work ?>
-	&nbsp;.&nbsp; <a href="../work/index.php"><?php if ($pg == "work") echo "<strong>Work</strong>"; else echo "Work";?></a>
+	&nbsp;.&nbsp; <a href="../work/index.php?pid=<?php echo $spid;?>"><?php if ($pg == "work") echo "<strong>Work</strong>"; else echo "Work";?></a>
     <?php } ?>
 </p>
 

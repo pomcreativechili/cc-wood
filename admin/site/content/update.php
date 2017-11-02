@@ -142,7 +142,7 @@
 	<form action="update.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 		<?php 
 			echo $error;
-			if (($ptype != "1" and $ptype != "5" and $ptype != "6") or ($ptype == "6" and $p[plist] == "1")) {
+			if (($ptype != "1" and $ptype != "5" and $ptype != "6") or ($ptype == "6" and $p[plist] == "1") or $p[plist] == "W") {
 				$pg = "info";
 				include("../submenu.php");
 			}
