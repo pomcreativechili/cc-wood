@@ -10,7 +10,7 @@
 	$chk = $_POST['chk'];
 	if ($chk == "1")	{
 		$ltype = $_POST['ltype'];
-		$lwidth = $_POST['lwidth'];
+		$lwidth = 750;
 
 		$lurl = preg_replace('/[^a-zA-Z0-9\-]/', '_', $_POST['lurl']);
 		$lurl = str_replace(" ","_","$lurl");
@@ -164,7 +164,7 @@ function check()	{
 	<form action="update.php" method="post" enctype="multipart/form-data" name="form1" id="form1" onsubmit="return check();">
 		<?php 
 			echo $error;
-			if ($ltype == "3") {
+			if ($ltype == "3" or $ltype == "4") {
 				$pg = "info";
 				include("../submenu.php");
 			}
@@ -310,8 +310,8 @@ function check()	{
 				<td>&nbsp;</td>
 				<td class="tip">
                 <?php 
-					if ($ltype == "1") echo '^ '.$lwidth.' Pixels for width size with any height size<br />';
-					else if ($ltype == "2" or $ltype == "3") echo '^ 600 Pixels for maximum of width size ('.$lwidth.' x '.$lheight.' Pixels for Thumbnail size)<br />';
+					if ($ltype == "1") echo '^ 750 x 500 Pixels for picture size<br />';
+					else if ($ltype == "2" or $ltype == "3") echo '^ 750 x 500 Pixels for picture size<br />';
 				?>
                 ^ .JPG, .PNG, GIF for file type
 				</td>

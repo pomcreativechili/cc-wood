@@ -18,9 +18,10 @@
 		include("../../config/page.info.php");
 		$gpath = "../../resources/pages/gallery";
 	}	else if ($sess_gtype == "3")	{
-		$gmax = 900;
-		$gwidth = 60;
-		$gheight = 60;
+		$gmax = 750;
+		$hmax = 500;
+		$gwidth = 75;
+		$gheight = 50;
 		$gpath = "../../resources/list/gallery";
 		$sqlls = "select * from tb_list WHERE lid='$sess_pid' AND pid='$sess_gpage' AND ltype='3'";
 		$resultls = mysql_query($sqlls, $dgz) or die(mysql_error());
@@ -496,8 +497,8 @@
 					<td class="tip">
                     <?php
 						if ($sess_gtype == 5) echo '^'.$gmax.' x '.$hmax.' Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
-						else if ($sess_gtype != 4) echo '^ 900 Pixels for maximum of width size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
-						else echo '^ 700 x 465 Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
+						else if ($sess_gtype != 4) echo '^'.$gmax.' x '.$hmax.' Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
+						else echo '^ 750 x 500 Pixels for picture size ('.$gwidth.' x '.$gheight.' Pixels for Thumbnail size)<br />';
 					?>
                     ^ 2 MB for file size and .JPG, .PNG, GIF for file type
 					</td>

@@ -23,9 +23,24 @@
 			echo '
 			<a id="ls'.$ls[lid].'" href="#ls'.$ls[lid].'" name="ls'.$ls[lid].'" class="listtopic"><h3>'.$ls[$ltopic].'</h3></a>
 			<div class="listbox">
-				<div class="slider-normal owl-carousel owl-theme">
-					<div class="listboxpic item"><img src="'.$lpath.'/'.$ls[lpic].'" alt="'.$ls[$ltopic].'" /></div>
-				</div>
+				<div class="slider-normal owl-carousel owl-theme">';
+
+				$sqlg = "SELECT * FROM tb_gallery WHERE pid='{$ls[lid]}' AND gpage='{$ls[pid]}' order by abs(gsort)";
+				$resultg = mysql_query($sqlg, $dgz) or die(mysql_error());
+				$totalg = mysql_num_rows($resultg);
+				if ($totalg > 0)	{
+					while ($gs = mysql_fetch_array($resultg))	{
+						$gtopic = "galt".$sess_lg;
+		?>
+					<div class="listboxpic item"><img src="<?php echo $lpath; ?>/gallery/<?php echo str_replace('th', '', $gs[gthumb]); ?>" alt="<?php echo $gs[$gtopic]; ?>" /></div>
+		<?php
+					}
+				} else {
+		?>
+					<div class="listboxpic item"><img src="<?php echo $lpath.'/'.$ls[lpic]; ?>" alt="<?php echo $ls[$ltopic]; ?>" /></div>
+		<?php
+				}
+			echo '</div>
 				<div class="listboxdetail">'.$lsdetail.$lslink.'</div>
 				<div class="clearline"></div>
 			</div>';

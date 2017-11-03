@@ -21,7 +21,7 @@
 	}	else if ($gtype == "3")	{
 		$gcss = " gnews";
 		$gpath = "../../resources/list/gallery";
-		$sqlls = "select * from tb_list WHERE lid='$pid' AND pid='$gpage' AND ltype='3'";
+		$sqlls = "select * from tb_list WHERE lid='$pid' AND pid='$gpage' AND (ltype='3' OR ltype='4')";
 		$resultls = mysql_query($sqlls, $dgz) or die(mysql_error());
 		$ls = mysql_fetch_array($resultls);
 	}	else if ($gtype == "4")	{
@@ -73,7 +73,7 @@
 		<?php 
 			if ($gtype == "3")	{
 				$lid = $pid;
-				$ltype = 3;
+				$ltype = $ls[ltype];
 			}	else if ($gtype == "4")	{
 				$wid = $pid;
 			}	else if ($gtype == "5")	{

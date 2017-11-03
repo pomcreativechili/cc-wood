@@ -54,4 +54,9 @@
 	&nbsp;.&nbsp; <a href="../gallery/index.php?pid=<?php echo $pid;?>&amp;gtype=5&amp;gpage=<?php echo $cid;?>&amp;pdid=<?php echo $pdid;?>"><?php if ($pg == "gallery") echo "<strong>Gallery</strong>"; else echo "Gallery";?></a>
 </p>
 
+<?php } else if ($lid != "") { // Listing ?>
+<p class="contentmenu">
+	<a href="../list/update.php?lid=<?php echo $lid;?>"><?php if ($pg == "info") echo "<strong>Info</strong>"; else echo "Info";?></a> 
+	&nbsp;.&nbsp; <a href="../gallery/index.php?pid=<?php echo $lid;?>&amp;gtype=3&amp;gpage=<?php echo $pid; ?>"><?php if ($pg == "gallery") echo "<strong>Gallery</strong>"; else echo "Gallery";?></a>
+</p>
 <?php } ?>

@@ -27,7 +27,7 @@
 			$sublist = array();
 			if ($mnsp[plist] != "0" and $spid == $mnsp[pid]) {
 
-				if ($splist == "1") {
+				if ($splist == "1" or $splist == "4") {
 					//Sublist
 					if ($sbpid != "") $sqlls = "select * from tb_list WHERE pid='{$mnsp[pid]}' AND ltype='{$mnsp[plist]}' AND lactive='1' order by abs(lsort)";
 					else $sqlls = "select * from tb_list WHERE pid='{$mnsp[pid]}' AND ltype='{$mnsp[plist]}' AND lactive='1' order by abs(lsort)";

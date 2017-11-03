@@ -38,7 +38,7 @@
 		if (($pgallery != "0" or ($spid != "8001" and $spid != "" and $spgallery != "0")) and $ptype != "1") include("content/page/info.gallery.php");
 	
 		// List
-		if ($splist == "1") 						include("content/list/list.accordian.php");
+		if ($splist == "1" or $splist == "4") 		include("content/list/list.accordian.php");
 		else if ($splist == "3") 					include("content/list/list.news.php");
 		else if ($plist == "2" or $splist == "2") 	include("content/list/list.info.php");
 		else if ($splist == "S") 					include("content/showroom/list.php");

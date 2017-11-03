@@ -10,7 +10,7 @@
 	if ($chk == "1")	{
 		$lid = date("ymdHis");
 		$ltype = $_POST['ltype'];
-		$lwidth = $_POST['lwidth'];
+		$lwidth = 750;
 		$lposted = date("Y-m-d H:i:s");
 
 		// English
@@ -213,7 +213,7 @@ function check()	{
 			<tr>
 				<td>&nbsp;</td>
 				<td class="tip">
-				^ <?php echo $lwidth;?> Pixels for width size with any height size<br />
+				^ 750 x 500 Pixels for picture size<br />
 				^ .JPG, .PNG, GIF for file type
 				</td>
 			</tr>
