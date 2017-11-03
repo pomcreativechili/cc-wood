@@ -1,4 +1,4 @@
-<div id="info"<?php if ($pid == "0000") echo ' class="infohome"';?> <?php if ($pid == "10000") echo ' class="infocontact"';?>>
+<div id="info"<?php if ($pid == "0000") echo ' class="infohome"';?> <?php if ($pid == "10000") echo ' class="infocontact"';?> <?php if ($pid == "11000") echo ' class="infodownload"';?>>
 <?php
 	// Menu sub pages
 	if ($ptype == "1") include("info.menu.php");
@@ -27,6 +27,9 @@
 		
 		// Contact Form
 		if ($pid == "10000") include("contact.php");
+
+		// Download
+		if ($pid == "11000") include("download.php");
 	
 		// End Information Area
 		echo '</div>';

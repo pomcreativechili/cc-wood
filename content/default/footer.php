@@ -13,7 +13,7 @@
         <ul id="footermenu">
             <!-- <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['8000']['url'];?>"<?php if ($pid == "8000") echo ' class="mnselect"';?>>News &amp; Recognition</a></li> -->
             <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['9000']['url'];?>"<?php if ($pid == "9000") echo ' class="mnselect"';?>>Join Our Team</a></li>
-            <li><a href="<?php echo $url."/pdf/Thaweephan_Brochure".$sess_lg.".pdf";?>" target="_blank">Downloads</a></li>
+            <li><a href="<?php echo $url.$lgurl.'/'.$mntxt['11000']['url'];?>"<?php if ($pid == "11000") echo ' class="mnselect"';?>>Download</a></li>
             <li><a href="<?php echo $url.$lgurl.'/popup/'.$mntxt['0002']['url'];?>" class="popupsubscribe">Newsletter</a></li>
         </ul>
         <div class="clearline"></div>

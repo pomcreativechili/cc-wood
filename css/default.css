@@ -15,6 +15,7 @@ body	{
 	font:normal 14px 'Open Sans', Tahoma, sans-serif;
 	color:#2d2d2d;
 	background:#fff;
+	overflow-x: hidden;
 }
 
 html[lang="th"] body {
@@ -464,7 +465,6 @@ __________________________________________________ */
 }
 
 /* Contact */
-
 #info.infocontact #infoarea {
 	width: 100%;
 }
@@ -515,4 +515,43 @@ __________________________________________________ */
 	border-radius: 0;
 	text-transform: lowercase;
 	font-family: inherit;
+}
+
+/* Download */
+#info.infodownload #infoarea {
+	width: 100%;
+}
+
+#info.infodownload .infotopic, #info.infodownload #infodetail {
+	display: none;
+}
+
+.download-item > div:not(.clearline) {
+	float: left;
+	padding: 0 10px;
+}
+
+.download-item {
+	margin-bottom: 40px;
+}
+
+.download-item .download-link {
+	width: 160px;
+	text-align: center;
+}
+
+.download-item .download-link a {
+	display: inline-block;
+	padding-top: 36px;
+	background: url(../images/default/icon-download.png) no-repeat center top;
+	text-decoration: underline;
+	text-transform: lowercase;
+}
+
+.download-item .download-text {
+	width: 630px;
+}
+
+.download-item .download-text h2 {
+	ยฟกกรืเ-bottom: 15px !important;
 }

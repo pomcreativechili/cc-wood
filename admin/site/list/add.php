@@ -109,11 +109,13 @@ function check()	{
 		document.form1.lbuttext_th.focus();
 		return false;
 	}
+	<?php if ($pid != '11000') { ?>
 	if (document.form1.lpic.value == "")	{
 		alert("Please choose a picture");
 		document.form1.lpic.focus();
 		return false;
 	}
+	<?php } ?>
 	return true;
 }
 </script> 
@@ -202,6 +204,7 @@ function check()	{
 				<td>&nbsp;</td>
 				<td class="tip">^ Example : http://www.yourdomain.com/yourpage.html</td>
 			</tr>
+			<?php if ($pid != '11000') { ?>
         	<tr><td class="contenttitle" colspan="2"><img src="../../images/tools/img.jpg" alt="" /> Picture</td></tr>
 			<tr>
 				<td style="padding-top:25px;">Choose (File) :</td>
@@ -214,6 +217,7 @@ function check()	{
 				^ .JPG, .PNG, GIF for file type
 				</td>
 			</tr>
+			<?php } ?>
 			<tr>
 				<td>&nbsp;</td>
 				<td>
