@@ -13,6 +13,7 @@
 <head>
 <link rel="shortcut icon" href="<?php echo $url;?>/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1066">
 <title><?php echo $ptitle;?></title>
 <meta name="description" content="<?php echo $pdesc;?>" />
 <meta name="keywords" content="<?php echo $pkeys;?>" />

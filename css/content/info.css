@@ -59,6 +59,14 @@ __________________________________________________ */
 	border-left-color: #000;
 }
 
+#infomenu ul.listacc	{
+	display: none;
+}
+
+#infomenu .mnspselect + ul.listacc	{
+	display: block;
+}
+
 #infomenu ul ul	{
 	margin-bottom: 7px;
 }

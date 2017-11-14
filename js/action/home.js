@@ -12,7 +12,7 @@ $(document).ready(function()	{
 	$('#highlightboxarea').owlCarousel({
 		items:1,
 	    loop:true,
-	    autoplay:true,
+	    autoplay:false,
 	    margin:0,
 	    nav:true,
 	    dots:false,

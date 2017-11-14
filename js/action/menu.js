@@ -41,11 +41,21 @@ $(document).ready(function()	{
 							$(this).next().slideToggle(400);
 						}
 					});
-					$(".srcbox").slides({
-						slideSpeed: 600,
-						generatePagination: false,
-						generateNextPrev: true
+
+					$('.slider-normal.owl-carousel').owlCarousel({
+						items:1,
+					    loop:true,
+					    autoplay:false,
+					    margin:0,
+					    nav:true,
+					    dots:true,
 					});
+
+					// $(".srcbox").slides({
+					// 	slideSpeed: 600,
+					// 	generatePagination: false,
+					// 	generateNextPrev: true
+					// });
 				});
 			}
 		}
@@ -84,11 +94,20 @@ $(document).ready(function()	{
 					$(this).next().slideToggle(400);
 				}
 			});
-			$(".srcbox").slides({
-				slideSpeed: 600,
-				generatePagination: false,
-				generateNextPrev: true
+
+			$('.slider-normal.owl-carousel').owlCarousel({
+				items:1,
+			    loop:true,
+			    autoplay:false,
+			    margin:0,
+			    nav:true,
+			    dots:true,
 			});
+			// $(".srcbox").slides({
+			// 	slideSpeed: 600,
+			// 	generatePagination: false,
+			// 	generateNextPrev: true
+			// });
 		}
 		function hideLoader() { $('#wrapper').fadeOut(300); }
 		return false;

@@ -9,13 +9,17 @@ __________________________________________________ */
 
 /* FONT FACE
 __________________________________________________ */
+html, body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
 body	{
 	margin:0px;
 	padding:0px;
 	font:normal 14px 'Open Sans', Tahoma, sans-serif;
 	color:#2d2d2d;
 	background:#fff;
-	overflow-x: hidden;
 }
 
 html[lang="th"] body {
@@ -24,7 +28,7 @@ html[lang="th"] body {
 
 a:link 		{ color:#2d2d2d; text-decoration: none; }
 a:visited 	{ color:#2d2d2d; text-decoration: none;  }
-a:hover 	{ color:#6b5543; text-decoration: none; }
+a:hover 	{ color:#000000; text-decoration: none; }
 a:active 	{ color:#2d2d2d; text-decoration: none;  }
 a img 		{ border:none; }
 
@@ -54,6 +58,9 @@ __________________________________________________ */
 /* Logo */
 #header #logo {
 	width:100%;
+}
+#header #logo img {
+	max-width: 280px;
 }
 #logo #logoarea	{
 	display: table;
@@ -150,6 +157,7 @@ __________________________________________________ */
 	opacity: 0.5;
 }
 #social .mnfacebook	{ background-image: url(../images/default/icon-facebook.png); }
+#social .mninstagram{ background-image: url(../images/default/icon-instagram.png); }
 #social .mnlinkedin	{ background-image: url(../images/default/icon-linkedin.png); }
 #social .mndownload	{ background-image: url(../images/default/icon-download.png); }
 #social .mncontact	{ background-image: url(../images/default/icon-email.png); }
@@ -195,7 +203,7 @@ __________________________________________________ */
 }
 #topmenu li:hover a,
 #topmenu .mnselect	{
-	color:#471f0a;
+	color:#000000;
 	background:#fff;
 	/*text-shadow: 0px 0px 3px #bfbfbf;*/
 	z-index:11;
@@ -426,7 +434,7 @@ __________________________________________________ */
 	display: inline-block;
 	padding:0px 14px 0px 14px;
 	text-align:center;
-	border-right:1px solid #b49c89;
+	border-right:1px solid #FFF;
 	text-transform: lowercase;
 }
 #bottommenu li:last-child	{

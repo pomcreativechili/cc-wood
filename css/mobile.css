@@ -1,10 +1,15 @@
 /* MOBILE
 __________________________________________________ */
-
 #mobilearea	{
 	margin:auto;
-	width:1066px !important;
+	width: 1066px !important;
 }
 #fancybox-overlay {
 	width: 1066px !important;
+}
+
+@media screen and (max-width: 1200px) {
+	#header #social {
+		right: 30px;
+	}
 }

@@ -78,6 +78,7 @@
 	</div>
     <ul id="social">
         <li><a href="https://www.facebook.com/thaweephanwood" target="_blank" class="mnfacebook">Facebook</a></li>
+        <li><a href="https://www.instagram.com/thaweephanwood/?hl=en" target="_blank" class="mninstagram">Instagram</a></li>
         <li><a href="http://www.linkedin.com/company/thaweephan-wood-products" target="_blank" class="mnlinkedin">LinkedIn</a></li>
         <!-- <li><a href="mailto:admin@thaweephan.co.th" target="_blank" class="mnemail">Email to Thaweephan</a></li> -->
         <li><a href="<?php echo $url.$lgurl.'/popup/'.$mntxt['0001']['url'];?>" class="mncontact popupcontact">Contact Us</a></li>

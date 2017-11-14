@@ -10,22 +10,25 @@
 	
         while ($mnsp = mysql_fetch_array($resultmnsp))	{
 			// URL
-			// if ($spg == "" and $npg == "" and $sbpg == "")	{
-			// 	$mnspurl = $p[purl].'/';
-			// }	else if ($spg != "" or $npg != "" or $sbpg != "")	{
-			// 	if ($mnsp[plist] == "1") $mnspurl = $url.$lgurl.'/'.$p[purl].'/';
-			// 	else $mnspurl = $url.$lgurl.'/'.$p[purl].'#'.$p[purl].'/';
-			// }
+			if ($spg == "" and $npg == "" and $sbpg == "")	{
+				$mnspurl = $p[purl].'/';
+			}	else if ($spg != "" or $npg != "" or $sbpg != "")	{
+				if ($mnsp[plist] == "1") $mnspurl = $url.$lgurl.'/'.$p[purl].'/';
+				else $mnspurl = $url.$lgurl.'/'.$p[purl].'#'.$p[purl].'/';
+			}
 
 			// List menu
-			if ($mnsp[plist] == "1") $plist_class = ''; else $plist_class = '';
-            echo '<li>';
-            if ($mnsp[pid] == $spid) echo '<h1 class="mnspselect tp'.$pid.$plist_class.'">'; else  echo '<a href="'.$url.$lgurl.'/'.$p[purl].'/'.$mnsp[purl].'" class="tp'.$pid.$plist_class.'">';
-			echo $mnsp[$mnspmenu];
-			if ($mnsp[pid] == $spid) echo '</h1>'; else echo '</a>';
+			// if ($mnsp[plist] == "1") $plist_class = ''; else $plist_class = '';
+   //          echo '<li>';
+   //          if ($mnsp[pid] == $spid) echo '<h1 class="mnspselect tp'.$pid.$plist_class.'">'; else  echo '<a href="'.$url.$lgurl.'/'.$p[purl].'/'.$mnsp[purl].'" class="mnnormal tp'.$pid.$plist_class.'">';
+			// echo $mnsp[$mnspmenu];
+			// if ($mnsp[pid] == $spid) echo '</h1>'; else echo '</a>';
+			if ($mnsp[pid] == $spid) $plist_class = ' mnspselect'; else $plist_class = '';
+			echo '<li>';
+			echo '<a href="'.$url.$lgurl.'/'.$p[purl].'/'.$mnsp[purl].'" class="mnnormal tp'.$pid.$plist_class.'">'.$mnsp[$mnspmenu].'</a>';
 
 			$sublist = array();
-			if ($mnsp[plist] != "0" and $spid == $mnsp[pid]) {
+			if ($mnsp[plist] != "0") {
 
 				if ($splist == "1" or $splist == "4") {
 					//Sublist
@@ -69,17 +72,25 @@
 				
 				if ($totalls > 0)	{
 					echo '<ul class="listacc">';
+					$submenu = 0;
 					while ($ls = mysql_fetch_array($resultls))	{
 						$lsdetail = $ls[$ldetail];
 						$lsdetail = str_replace("&quot;",'"',"$lsdetail");
 						$lsdetail = str_replace("&rsquo;","'","$lsdetail");
 
+						if ( $submenu == 0 and $spid == $mnsp[pid] ) $submenu_class = 'mnspselect'; else $submenu_class = '';
+
 						//if ($spid != $ls[pid]) $suburl = $mnspurl.$mnsp[purl].'#ls'.$ls[lid]; else $suburl = 'javascript:;';
 
-
-						echo '<li><a href="javascript:;" name="'.$lprefix.$ls[$lid].'" class="listtopic">'.$ls[$ltopic].'</a></li>';
+						if ( $lid == "wid" ) {
+							echo '<li><a href="#projectgallery-'.$ls[$lid].'" name="'.$lprefix.$ls[$lid].'" class="'.$submenu_class.' listtopic">'.$ls[$ltopic].'</a></li>';
+						} else {
+							echo '<li><a href="javascript:;" name="'.$lprefix.$ls[$lid].'" class="'.$submenu_class.' listtopic">'.$ls[$ltopic].'</a></li>';
+						}
 
 						//$sublist[] = array( 'lid' => $ls[lid], 'ltopic' => $ltopic, 'ldetail' => $ldetail, 'lpath' => $lpath, 'lpic' => $ls[lpic], 'lbuttext' => $ls[$lbuttext], 'lbuturl' => $lbuturl );
+
+						$submenu++;
 					}
 					echo '</ul>';
 				}
